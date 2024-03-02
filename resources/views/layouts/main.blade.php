@@ -50,9 +50,19 @@
                             <a class="nav-link" href="#feedback-section">Testimonials</a>
                         </li>
                         <li class="nav-item btn-contact-us pl-4 pl-lg-0">
-                            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Contact
-                                Us</button>
+                            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Contact Us</button>
                         </li>
+                        @auth
+                            <li class="nav-item text-nowrap ml-2">
+                                <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Особистий кабінет</button>
+                            </li>
+                            <li class="nav-item text-nowrap ml-2">
+                                <form action="{{ route('logout') }}" method="post">
+                                    @csrf
+                                    <input class="btn btn-outline-info" type="submit" value="Вихід">
+                                </form>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </div>

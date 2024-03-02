@@ -3,11 +3,11 @@
 @section('contentMainBlock')
     <div class="banner">
         <div class="container">
-            <h1 class="font-weight-semibold">Search engine optimisation &<br>Marketing.</h1>
-            <h6 class="font-weight-normal text-muted pb-3">Simple is a simple template with a creative design that solves all
-                your marketing and SEO queries.</h6>
+            <h1 class="font-weight-semibold">Highly Distinguished Courses</h1>
+            <h6 class="font-weight-normal text-muted pb-3">We know how large objects will act, but things on a small scale
+            </h6>
             <div>
-                <button class="btn btn-opacity-light mr-1">Get started</button>
+                <button class="btn btn-opacity-light mr-1">Join Us</button>
                 <button class="btn btn-opacity-success ml-1">Learn more</button>
             </div>
             <img src="images/Group171.svg" alt="" class="img-fluid">
@@ -17,17 +17,19 @@
 @section('content')
     <section class="features-overview" id="features-section">
         <div class="content-header">
-            <h2>How does it works</h2>
-            <h6 class="section-subtitle text-muted">One theme that serves as an easy-to-use operational toolkit<br>that
-                meets customer's needs.</h6>
+            <h2>Lifetime access</h2>
+            <h6 class="section-subtitle text-muted">The gradual accumulation of
+                information about atomic and
+                small-scale behaviour...</h6>
         </div>
         <div class="d-md-flex justify-content-between">
             <div class="grid-margin d-flex justify-content-start">
                 <div class="features-width">
                     <img src="images/Group12.svg" alt="" class="img-icons">
-                    <h5 class="py-3">Speed<br>Optimisation</h5>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer
-                        turpis, suspendisse.</p>
+                    <h5 class="py-3">training Courses</h5>
+                    <p class="text-muted">The gradual accumulation of
+                        information about atomic and
+                        small-scale behaviour...</p>
                     <a href="#">
                         <p class="readmore-link">Readmore</p>
                     </a>
@@ -36,9 +38,10 @@
             <div class="grid-margin d-flex justify-content-center">
                 <div class="features-width">
                     <img src="images/Group7.svg" alt="" class="img-icons">
-                    <h5 class="py-3">SEO and<br>Backlinks</h5>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer
-                        turpis, suspendisse.</p>
+                    <h5 class="py-3">Books Liberary</h5>
+                    <p class="text-muted">The gradual accumulation of
+                        information about atomic and
+                        small-scale behaviour...</p>
                     <a href="#">
                         <p class="readmore-link">Readmore</p>
                     </a>
@@ -60,12 +63,16 @@
     <section class="digital-marketing-service" id="digital-marketing-section">
         <div class="row align-items-center">
             <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">
-                <h3 class="m-0">We Offer a Full Range<br>of Digital Marketing Services!</h3>
+                <h3 class="m-0">Make online education<br>accessible</h3>
                 <div class="col-lg-7 col-xl-6 p-0">
-                    <p class="py-4 m-0 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus
-                        consectetuer turpis, suspendisse.</p>
-                    <p class="font-weight-medium text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus
-                        consectetuer</p>
+                    <p class="py-4 m-0 text-muted">
+                        Problems trying to resolve the conflict between
+                        the two major realms of Classical physics:
+                        Newtonian mechanics
+                    </p>
+                    <button class="btn btn-opacity-success ml-1">Learn more</button>
+                    {{-- <p class="font-weight-medium text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus
+                        consectetuer</p> --}}
                 </div>
             </div>
             <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">
@@ -77,22 +84,21 @@
                 <img src="images/Group2.png" alt="" class="img-fluid">
             </div>
             <div class="col-12 col-lg-5 flex-item grid-margin" data-aos="fade-left">
-                <h3 class="m-0">Leading Digital Agency<br>for Business Solution.</h3>
+                <h3 class="m-0">Watch our Courses</h3>
                 <div class="col-lg-9 col-xl-8 p-0">
-                    <p class="py-4 m-0 text-muted">Power-packed with impressive features and well-optimized, this template
-                        is designed to provide the best performance in all circumstances.</p>
-                    <p class="pb-2 font-weight-medium text-muted">Its smart features make it a powerful stand-alone website
-                        building tool.</p>
+                    <p class="py-4 m-0 text-muted">
+                        Problems trying to resolve the conflict between
+                        the two major realms of Classical physics: Newtonian mechanics
+                    </p>
                 </div>
-                <button class="btn btn-info">Readmore</button>
             </div>
         </div>
     </section>
     <section class="case-studies" id="case-studies-section">
         <div class="row grid-margin">
             <div class="col-12 text-center pb-5">
-                <h2>Our case studies</h2>
-                <h6 class="section-subtitle text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.</h6>
+                <h2>Choose the appropriate course</h2>
+                {{-- <h6 class="section-subtitle text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum.</h6> --}}
             </div>
             <div class="col-12 col-md-6 col-lg-3 stretch-card mb-3 mb-lg-0" data-aos="zoom-in">
                 <div class="card color-cards">
