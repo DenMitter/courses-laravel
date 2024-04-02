@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.personal')
 
 @section('content')
-<div class="container">
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -61,5 +61,41 @@
             </div>
         </div>
     </div>
+</div> --}}
+<div class="wrapper" data-v-0569d440="">
+    <main class="main" data-v-0569d440="">
+      <section class="section-form" data-v-4c4b7857="" data-v-0569d440="">
+        <form class="form" data-v-4c4b7857="" method="POST" action="{{ route('password.update') }}">
+            @csrf
+            <input type="hidden" name="token" value="{{ $token }}">
+
+            <div class="form__head" data-v-4c4b7857="">
+                <h3 class="form__title" data-v-4c4b7857="">Восстановление пароля <img src="{{ asset('img\4.fb6fb7d.png') }}" alt="waving" data-v-4c4b7857=""></h3>
+            </div>
+            <div class="form__fields" data-v-4c4b7857="">
+                <div class="form__fields-item" data-v-4c4b7857="">
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    <input type="email" placeholder="E-mail" autocomplete="email" value="{{ $email ?? old('email') }}" data-v-4c4b7857="" name="email" id="validateEmail" autofocus>
+                </div>
+                <div class="form__fields-item" data-v-4c4b7857="">
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    <input type="password" placeholder="Пароль" autocomplete="new-password" value="" data-v-4c4b7857="" name="password">
+                </div>
+                <div class="form__fields-item" data-v-4c4b7857=""><input type="password" placeholder="Пароль" autocomplete="new-password" value="" data-v-4c4b7857="" name="password_confirmation"></div>
+                <button type="submit" class="btn variant-pink" data-v-1ede2ded="" data-v-4c4b7857="" id="submitButton">
+                    <div class="btn-content" data-v-1ede2ded="">Сменить</div>
+                </button>
+            </div>
+        </form>
+      </section>
+    </main>
 </div>
 @endsection

@@ -29,6 +29,9 @@ class StoreRequest extends FormRequest
             'tag_ids.*' => 'nullable|integer|exists:tags,id',
             'price' => 'integer',
             'color' => 'string',
+            'description' => 'required|string',
+            'starting' => 'required|string',
+            'during' => 'required|string',
         ];
     }
 }

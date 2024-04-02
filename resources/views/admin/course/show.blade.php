@@ -24,7 +24,7 @@
             <tbody>
               <tr>
                 <td><a href="{{ route('admin.course.lesson.create', $course->id) }}" type="button" class="btn btn-block btn-success btn-sm">Додати урок</a></td>
-                <td><a href="{{ route('admin.course.lesson.edit', $course->id) }}" type="button" class="btn btn-block btn-primary btn-sm">Редагувати курс</a></td>
+                <td><a href="{{ route('admin.course.edit', $course->id) }}" type="button" class="btn btn-block btn-primary btn-sm">Редагувати курс</a></td>
               </tr>
             </tbody>
           </table>
@@ -60,6 +60,18 @@
                         @endif
                       @endforeach
                     </td>
+                  </tr>
+                  <tr>
+                    <td>Опис курсу</td>
+                    <td>{{ $course->description }}</td>
+                  </tr>
+                  <tr>
+                    <td>Дата старту</td>
+                    <td>{{ $course->starting }}</td>
+                  </tr>
+                  <tr>
+                    <td>Як довго буде йти курс</td>
+                    <td>{{ $course->during }}</td>
                   </tr>
                 </tbody>
               </table>

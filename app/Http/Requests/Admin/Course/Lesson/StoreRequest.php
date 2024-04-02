@@ -27,6 +27,9 @@ class StoreRequest extends FormRequest
             'lesson_file' => 'file',
             'link_video' => 'required|string',
             'lesson_content' => 'string',
+            'file_name' => 'string',
+            'starting' => 'required|string',
+            'homework_content' => 'required|string',
         ];
     }
 }

@@ -16,7 +16,12 @@ class StoreController extends Controller
             $tagIds = $data['tag_ids'];
             unset($data['tag_ids']);
             
-            $course = Course::firstOrCreate($data);
+            $course = Course::firstOrCreate([
+                'author' => auth()->user()->name, 
+                'author_about' => auth()->user()->about,
+                'author_avatar' => auth()->user()->avatar
+            ], $data);
+
             $course->tags()->attach($tagIds);
         } catch(\Exception $exception) {
             abort(500);

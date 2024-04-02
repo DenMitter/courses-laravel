@@ -20,49 +20,40 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>{{ $courses->count() }}</h3>
-
-                <p>Курсів</p>
+          <div class="col-md-3 col-12">
+            <div class="info-box shadow-lg">
+              <span class="info-box-icon bg-info"><ion-icon name="albums-outline"></ion-icon></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Курсів</span>
+                <span class="info-box-number">{{ $courses->count() }}</span>
               </div>
-              <div class="icon">
-                <i class="fas fa-book"></i>
-                {{-- <i class="ion ion-bag"></i> --}}
-              </div>
-              {{-- <a href="{{ route('admin.course.index') }}" class="small-box-footer">Детальніше <i class="fas fa-arrow-circle-right"></i></a> --}}
             </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>{{ $lessons->count() }}</h3>
-
-                <p>Уроків</p>
+          <div class="col-md-3 col-12">
+            <div class="info-box shadow-lg">
+              <span class="info-box-icon bg-success"><ion-icon name="document-outline"></ion-icon></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Уроків</span>
+                <span class="info-box-number">{{ $lessons->count() }}</span>
               </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              {{-- <a href="{{ route('admin.lesson.index') }}" class="small-box-footer">Детальніше <i class="fas fa-arrow-circle-right"></i></a> --}}
             </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>{{ $users->count() }}</h3>
-
-                <p>Користувачів</p>
+          <div class="col-md-3 col-12">
+            <div class="info-box shadow-lg">
+              <span class="info-box-icon bg-danger"><ion-icon name="people-outline"></ion-icon></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Користувачів</span>
+                <span class="info-box-number">{{ $users->count() }}</span>
               </div>
-              <div class="icon">
-                <i class="fas fa-users"></i>
+            </div>
+          </div>
+          <div class="col-md-3 col-12">
+            <div class="info-box shadow-lg">
+              <span class="info-box-icon bg-warning"><ion-icon name="newspaper-outline"></ion-icon></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Розсилки</span>
+                <span class="info-box-number">{{ $newsletter->count() }}</span>
               </div>
-              {{-- <a href="{{ route('admin.user.index') }}" class="small-box-footer">Детальніше <i class="fas fa-arrow-circle-right"></i></a> --}}
             </div>
           </div>
         </div>

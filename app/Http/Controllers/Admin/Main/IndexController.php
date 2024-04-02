@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Main;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Lesson;
+use App\Models\Newsletter;
 use App\Models\User;
 
 class IndexController extends Controller
@@ -12,6 +13,7 @@ class IndexController extends Controller
         $courses = Course::all();
         $lessons = Lesson::all();
         $users = User::all();
-        return view('admin.main.index', compact('courses', 'lessons', 'users'));
+        $newsletter = Newsletter::all();
+        return view('admin.main.index', compact('courses', 'lessons', 'users', 'newsletter'));
     }
 }

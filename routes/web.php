@@ -14,8 +14,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\Main\IndexController')->name('main.index');
 
+Route::get('/', 'App\Http\Controllers\Main\IndexController')->name('main.index');
+Route::post('/message', 'App\Http\Controllers\Main\MessageController')->name('main.index.message');
+Route::post('/subscribe', 'App\Http\Controllers\Main\NewsletterSubscribeController')->name('main.index.subscribe');
+Route::get('/webinars', 'App\Http\Controllers\Main\WebinarsController')->name('main.webinars');
+Route::get('/blog', 'App\Http\Controllers\Main\BlogController')->name('main.blog');
+Route::get('/about', 'App\Http\Controllers\Main\AboutController')->name('main.about');
+Route::get('/contacts', 'App\Http\Controllers\Main\ContactsController')->name('main.contacts');
+
+Route::group(['prefix' => 'personal', 'middleware' => 'auth'], function () {
+    Route::get('/', 'App\Http\Controllers\Personal\Main\IndexController')->name('personal.main.index');
+
+    Route::group(['prefix' => 'course', 'middleware' => 'auth'], function () {
+        Route::get('/{course}', 'App\Http\Controllers\Personal\Course\IndexController')->name('personal.course.index');
+        Route::get('/take/{course}', 'App\Http\Controllers\Personal\Course\TakeCourseController')->name('personal.course.take');
+        Route::get('/payment/{course}', 'App\Http\Controllers\Personal\Course\PaymentController')->name('personal.course.payment');
+        
+        Route::get('/lesson/{lesson}/course/{course}', 'App\Http\Controllers\Personal\Lesson\IndexController')->name('personal.lesson.index');
+    });
+});
+
+Route::group(['prefix' => 'course'], function () {
+    Route::get('/{course}', 'App\Http\Controllers\Course\IndexController')->name('course.index');
+});
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin', 'verified']], function () {
     Route::get('/', 'App\Http\Controllers\Admin\Main\IndexController')->name('admin.main.index');
@@ -58,6 +80,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin', 'verified']
         Route::get('/{tag}/edit', 'App\Http\Controllers\Admin\Tag\EditController')->name('admin.tag.edit');
         Route::patch('/{tag}', 'App\Http\Controllers\Admin\Tag\UpdateController')->name('admin.tag.update');
         Route::delete('/{tag}', 'App\Http\Controllers\Admin\Tag\DeleteController')->name('admin.tag.delete');
+    });
+
+    Route::group(['prefix' => 'newsletter'], function () {
+        Route::get('/', 'App\Http\Controllers\Admin\Newsletter\IndexController')->name('admin.newsletter.index');
+        Route::get('/create', 'App\Http\Controllers\Admin\Newsletter\CreateController')->name('admin.newsletter.create');
+        Route::post('/', 'App\Http\Controllers\Admin\Newsletter\StoreController')->name('admin.newsletter.store');
+        Route::get('/{newsletter}', 'App\Http\Controllers\Admin\Newsletter\ShowController')->name('admin.newsletter.show');
+        Route::get('/{newsletter}/edit', 'App\Http\Controllers\Admin\Newsletter\EditController')->name('admin.newsletter.edit');
+        Route::patch('/{newsletter}', 'App\Http\Controllers\Admin\Newsletter\UpdateController')->name('admin.newsletter.update');
+        Route::delete('/{newsletter}', 'App\Http\Controllers\Admin\Newsletter\DeleteController')->name('admin.newsletter.delete');
     });
 });
 

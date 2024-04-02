@@ -29,7 +29,7 @@
           @method('PATCH')
           <div class="card-body">
             <div class="form-group">
-              <label for="exampleInputEmail1">Назва</label>
+              <label>Назва</label>
               <input name="title" type="text" class="form-control" placeholder="Назва курса" value="{{ $course->title }}">
               @error('title')
                 <p class="text-danger">Це поле має бути заповненим</p>
@@ -56,14 +56,37 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Ціна курсу</label>
+              <label>Ціна курсу</label>
               <input name="price" type="number" class="form-control" placeholder="Ціна курсу" value="{{ $course->price }}">
               @error('price')
                 <p class="text-danger">Це поле має бути заповненим</p>
               @enderror
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Основний колір</label>
+              <label>Опис курсу</label>
+              <textarea name="description" class="form-control" placeholder="Опис курсу">{{ $course->description }}</textarea>
+              @error('description')
+                <p class="text-danger">Це поле має бути заповненим</p>
+              @enderror
+            </div>
+            <div class="d-flex p-0 w-100">
+              <div class="form-group w-100">
+                <label>Дата старту</label>
+                <input name="starting" type="date" class="form-control" placeholder="Дата старту" value="">
+                @error('starting')
+                  <p class="text-danger">Це поле має бути заповненим</p>
+                @enderror
+              </div>
+              <div class="form-group ml-2 w-100">
+                <label>Як довго буде йти курс</label>
+                <input name="during" type="text" class="form-control" placeholder="1 тиждень" value="{{ $course->during }}">
+                @error('during')
+                  <p class="text-danger">Це поле має бути заповненим</p>
+                @enderror
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Основний колір</label>
               <input name="color" type="color" class="form-control" placeholder="Ціна курсу" value="{{ $course->color }}">
               @error('color')
                 <p class="text-danger">Це поле має бути заповненим</p>

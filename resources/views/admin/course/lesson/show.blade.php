@@ -46,12 +46,20 @@
                   <td><a href="{{ $lesson->link_video }}" target="_blank">натисніть щоб переглянути відео</a></td>
                 </tr>
                 <tr>
-                  <td>Текст до уроку</td>
+                  <td>Опис уроку</td>
                   <td>{!! $lesson->lesson_content !!}</td>
                 </tr>
                 <tr>
                   <td>Додатковий матеріал до уроку</td>
-                  <td><a href="{{ $lesson->lesson_file }}" target="_blank">натисніть щоб завантажити матеріал</a></td>
+                  <td><a href="{{ '/storage/' . $lesson->lesson_file }}" download="{{ $lesson->file_name }}">{{ $lesson->file_name }}</a></td>
+                </tr>
+                <tr>
+                  <td>Дата старту</td>
+                  <td>{{ $lesson->starting }}</td>
+                </tr>
+                <tr>
+                  <td>Домашня робота</td>
+                  <td>{{ $lesson->homework_content }}</td>
                 </tr>
               </tbody>
             </table>
