@@ -24,15 +24,15 @@ Route::get('/blog', 'App\Http\Controllers\Main\BlogController')->name('main.blog
 Route::get('/about', 'App\Http\Controllers\Main\AboutController')->name('main.about');
 Route::get('/contacts', 'App\Http\Controllers\Main\ContactsController')->name('main.contacts');
 
-Route::group(['prefix' => 'personal', 'middleware' => 'auth'], function () {
-    Route::get('/', 'App\Http\Controllers\Personal\Main\IndexController')->name('personal.main.index');
+Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
+    Route::get('/', 'App\Http\Controllers\User\Main\IndexController')->name('user.main.index');
 
     Route::group(['prefix' => 'course', 'middleware' => 'auth'], function () {
-        Route::get('/{course}', 'App\Http\Controllers\Personal\Course\IndexController')->name('personal.course.index');
-        Route::get('/take/{course}', 'App\Http\Controllers\Personal\Course\TakeCourseController')->name('personal.course.take');
-        Route::get('/payment/{course}', 'App\Http\Controllers\Personal\Course\PaymentController')->name('personal.course.payment');
+        Route::get('/{course}', 'App\Http\Controllers\User\Course\IndexController')->name('user.course.index');
+        Route::get('/take/{course}', 'App\Http\Controllers\User\Course\TakeCourseController')->name('user.course.take');
+        Route::get('/payment/{course}', 'App\Http\Controllers\User\Course\PaymentController')->name('user.course.payment');
         
-        Route::get('/lesson/{lesson}/course/{course}', 'App\Http\Controllers\Personal\Lesson\IndexController')->name('personal.lesson.index');
+        Route::get('/lesson/{lesson}/course/{course}', 'App\Http\Controllers\User\Lesson\IndexController')->name('user.lesson.index');
     });
 });
 

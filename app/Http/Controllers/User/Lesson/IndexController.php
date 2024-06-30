@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Personal\Lesson;
+namespace App\Http\Controllers\User\Lesson;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Lesson;
@@ -14,6 +14,6 @@ class IndexController extends Controller
 
         $date = Carbon::parse($lesson->starting);
         $userTime = Carbon::now()->addHours(2);
-        return view('personal.lesson.index', compact('lesson', 'lessons', 'course', 'date', 'userTime'));
+        return view('user.lesson.index', compact('lesson', 'lessons', 'course', 'date', 'userTime'));
     }
 }

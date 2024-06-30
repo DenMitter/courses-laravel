@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Personal\Main;
+namespace App\Http\Controllers\User\Main;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Lesson;
@@ -13,6 +13,6 @@ class IndexController extends Controller
         $tags = Tag::all();
         $user = auth()->user();
         $lessons = Lesson::all();
-        return view('personal.index', compact('courses', 'user', 'tags', 'lessons'));
+        return view('user.index', compact('courses', 'user', 'tags', 'lessons'));
     }
 }

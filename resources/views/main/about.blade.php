@@ -242,7 +242,7 @@
                     </button>
                     <div class="form__policy" data-v-bbb3a68a="">
                       Натискаючи на цю кнопку, я даю згоду на обробку своїх
-                      <a href="/offerta#personal" target="_blank" data-v-bbb3a68a="">персональних даних</a> 
+                      <a href="/offerta#user" target="_blank" data-v-bbb3a68a="">персональних даних</a> 
                       і погоджуюсь з <a href="/offerta" target="_blank" data-v-bbb3a68a="">договором оферти</a>
                     </div>
                   </form>

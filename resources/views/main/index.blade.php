@@ -120,7 +120,7 @@
                   <div class="btn-content" data-v-0c1d1295="">Почати безкоштовно</div>
                 </button>
               @else
-                <a href="{{ route('personal.main.index') }}" class="btn variant-blue" data-v-0c1d1295="" data-v-0293901a="">
+                <a href="{{ route('user.main.index') }}" class="btn variant-blue" data-v-0c1d1295="" data-v-0293901a="">
                   <div class="btn-content" data-v-0c1d1295="">Перейти на платформу</div>
                 </a>
               @endif
@@ -512,7 +512,7 @@
                           </button>
                           <div class="form__policy" data-v-bbb3a68a="">
                             Натискаючи на цю кнопку, я даю згоду на обробку своїх
-                            <a href="/offerta#personal" target="_blank" data-v-bbb3a68a="">персональних даних</a> 
+                            <a href="/offerta#user" target="_blank" data-v-bbb3a68a="">персональних даних</a> 
                             і погоджуюсь з <a href="/offerta" target="_blank" data-v-bbb3a68a="">договором оферти</a>
                           </div>
                         </form>

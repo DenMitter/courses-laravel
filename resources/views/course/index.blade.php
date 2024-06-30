@@ -29,13 +29,13 @@
                             <p data-v-085dd42a="">{{ $course->description }}</p>
                             @auth
                                 @if(!auth()->user()->courses()->where('course_id', $course->id)->exists())
-                                    <a href="{{ $course->price > 0 ? route('personal.course.payment', $course) : route('personal.course.take', $course) }}" class="btn variant-blue" data-v-0c1d1295="" data-v-085dd42a="">
+                                    <a href="{{ $course->price > 0 ? route('user.course.payment', $course) : route('user.course.take', $course) }}" class="btn variant-blue" data-v-0c1d1295="" data-v-085dd42a="">
                                         <div class="btn-content" data-v-0c1d1295="">
                                             <span data-v-0c1d1295="" data-v-085dd42a="">Зареєструватись</span>
                                         </div>
                                     </a>
                                 @else
-                                    <span href="{{ route('personal.course.take', $course) }}" class="btn variant-blue disabled" data-v-0c1d1295="" data-v-085dd42a="">
+                                    <span href="{{ route('user.course.take', $course) }}" class="btn variant-blue disabled" data-v-0c1d1295="" data-v-085dd42a="">
                                         <div class="btn-content" data-v-0c1d1295="">
                                             <span data-v-0c1d1295="" data-v-085dd42a="">Ви зареєстровані на курс</span>
                                         </div>
@@ -303,7 +303,7 @@
                                     </div>
                                 </div> 
                                 <h4 data-v-a0c771f4="">Блиск! Ти вже студент цього курсу.</h4>
-                                <a data-v-a0c771f4="" href="{{ route('personal.main.index') }}">
+                                <a data-v-a0c771f4="" href="{{ route('user.main.index') }}">
                                     <button data-v-7ebd546e="" data-v-a0c771f4="" type="button" class="btn variant-blue">
                                         <div data-v-7ebd546e="" class="btn-content">
                                             <div data-v-a0c771f4="" data-v-7ebd546e="" class="centered">

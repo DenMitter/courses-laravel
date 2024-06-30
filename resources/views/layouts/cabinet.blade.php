@@ -17,7 +17,7 @@
     <link data-n-head="ssr" rel="shortcut icon" href="favicon.png">
     <link data-n-head="ssr" href="https://mc.yandex.ru/metrika/tag.js" rel="preload" as="script">
     <script data-n-head="ssr" src="img\svg-sprite\svg-sprite.js"></script>
-    <link rel="stylesheet" href="{{ asset('css/personal.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/user.css') }}">
 <body>
     <div data-v-5dff1a2e="" data-v-20e9b6b4="" class="tooltip-small" style="width: auto; font-size: 12px; --bottom: 5px; --offset: 0px; top: 74px; left: 1600.48px;">Выйти</div>
 

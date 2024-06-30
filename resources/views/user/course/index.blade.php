@@ -2831,15 +2831,15 @@
         margin-top: 51px
     }
 
-    .edit__box_personal .fields__input:first-child {
+    .edit__box_user .fields__input:first-child {
         margin-right: unset
     }
 
-    .edit__box_personal .fields__item {
+    .edit__box_user .fields__item {
         margin: 0 -23px
     }
 
-    .edit__box_personal .fields__input {
+    .edit__box_user .fields__input {
         margin: 0 23px;
         width: calc(50% - 46px)
     }
@@ -5532,7 +5532,7 @@
             flex-basis: 270px
         }
 
-        .edit__box_personal .edit__form {
+        .edit__box_user .edit__form {
             flex-direction: column
         }
 
@@ -5653,16 +5653,16 @@
             width: calc(100% - 28px)
         }
 
-        .edit__box_personal .fields__input {
+        .edit__box_user .fields__input {
             margin: 0 23px;
             width: calc(100% - 46px)
         }
 
-        .edit__box_personal .fields__item {
+        .edit__box_user .fields__item {
             flex-wrap: nowrap
         }
 
-        .edit__box_personal .fields__input {
+        .edit__box_user .fields__input {
             width: calc(50% - 35px)
         }
 
@@ -5958,7 +5958,7 @@
         }
 
         .edit__box_address .fields__input,
-        .edit__box_personal .fields__input {
+        .edit__box_user .fields__input {
             margin-bottom: 20px
         }
 
@@ -5966,11 +5966,11 @@
             margin-bottom: 0
         }
 
-        .edit__box_personal .fields__item {
+        .edit__box_user .fields__item {
             flex-direction: column
         }
 
-        .edit__box_personal .fields__input {
+        .edit__box_user .fields__input {
             width: unset;
             max-width: calc(100% - 46px);
             width: 100%
@@ -9795,7 +9795,7 @@
     <div data-v-db41e95e="" class="wrapper all-content full-cost df">
         <main data-v-db41e95e="" class="main">
             <div data-v-db41e95e="" class="section-head mb_50 df">
-                <a data-v-db41e95e="" href="{{ route('personal.main.index') }}" class="nuxt-link-active back-link"></a>
+                <a data-v-db41e95e="" href="{{ route('user.main.index') }}" class="nuxt-link-active back-link"></a>
                 <h2 data-v-db41e95e="" class="main-title ts_25">На главную</h2>
             </div>
             <div data-v-db41e95e="">
@@ -9868,7 +9868,7 @@
                                                 @break
                                             @default
                                                 @if ($lessonCount > 0)
-                                                    <a href="{{ route('personal.lesson.index', ['lesson' => $firstLessonId, 'course' => $course]) }}" class="btn variant-green to-lesson-btn" data-v-1ede2ded="" data-v-53105e2c="">
+                                                    <a href="{{ route('user.lesson.index', ['lesson' => $firstLessonId, 'course' => $course]) }}" class="btn variant-green to-lesson-btn" data-v-1ede2ded="" data-v-53105e2c="">
                                                         <div class="btn-content" data-v-1ede2ded="">
                                                             <svg viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"  width="15" data-v-53105e2c="" class=""><path d="M5.729 6.105v3.79c0 .283.123.49.371.619.248.13.49.118.726-.035L9.766 8.6A.648.648 0 0010.102 8a.648.648 0 00-.336-.602L6.826 5.52a.674.674 0 00-.726-.035.652.652 0 00-.371.62zm1.77 8.978c-.98 0-1.9-.186-2.762-.559a7.164 7.164 0 01-2.25-1.513 7.147 7.147 0 01-1.513-2.25A6.91 6.91 0 01.416 8c0-.98.186-1.9.558-2.762a7.164 7.164 0 011.514-2.25 7.148 7.148 0 012.249-1.513A6.91 6.91 0 017.499.916c.98 0 1.901.186 2.763.558a7.163 7.163 0 012.249 1.514 7.158 7.158 0 011.514 2.249c.372.862.558 1.782.558 2.762s-.186 1.901-.559 2.763a7.164 7.164 0 01-1.513 2.249 7.157 7.157 0 01-2.25 1.514 6.884 6.884 0 01-2.762.558zm0-1.417c1.57 0 2.908-.552 4.012-1.655 1.104-1.104 1.655-2.441 1.655-4.012 0-1.57-.552-2.907-1.655-4.01-1.104-1.105-2.441-1.657-4.012-1.656-1.57 0-2.907.551-4.01 1.655C2.383 5.092 1.831 6.428 1.832 8c0 1.57.551 2.908 1.655 4.012 1.104 1.104 2.44 1.655 4.011 1.655z" fill="currentColor" data-v-53105e2c=""></path></svg>
                                                             Начать обучение
@@ -9906,13 +9906,13 @@
                     @if(!$user->courses()->where('course_id', $course->id)->exists())
                         @if ($course->price <= 0)
                             <div data-v-74d46a74="" data-v-0d2d9f8c="" class="d-flex w-100">
-                                <a href="{{ route('personal.course.take', $course) }}" data-v-74d46a74="" class="course-button centered">
+                                <a href="{{ route('user.course.take', $course) }}" data-v-74d46a74="" class="course-button centered">
                                     <div data-v-74d46a74="">Зарегистрироваться на курс</div>
                                 </a>
                             </div>
                         @else
                             <div data-v-74d46a74="" data-v-0d2d9f8c="" class="d-flex w-100">
-                                <a href="{{ route('personal.course.payment', $course) }}" data-v-74d46a74="" class="course-button centered">
+                                <a href="{{ route('user.course.payment', $course) }}" data-v-74d46a74="" class="course-button centered">
                                     <div data-v-74d46a74="">Оплатить обучение ${{ $course->price }}</div>
                                 </a>
                                 <div data-v-74d46a74="" class="payment-details-wrapper">
@@ -9990,7 +9990,7 @@
                                     @endphp
                                 @endif
                             @endforeach
-                            <a href="{{ route('personal.lesson.index', ['lesson' => $firstLessonId, 'course' => $course]) }}" class="btn variant-green to-lesson-btn" data-v-1ede2ded="" data-v-53105e2c="">
+                            <a href="{{ route('user.lesson.index', ['lesson' => $firstLessonId, 'course' => $course]) }}" class="btn variant-green to-lesson-btn" data-v-1ede2ded="" data-v-53105e2c="">
                                 <div class="btn-content" data-v-1ede2ded="">
                                     <svg viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"  width="15" data-v-53105e2c="" class=""><path d="M5.729 6.105v3.79c0 .283.123.49.371.619.248.13.49.118.726-.035L9.766 8.6A.648.648 0 0010.102 8a.648.648 0 00-.336-.602L6.826 5.52a.674.674 0 00-.726-.035.652.652 0 00-.371.62zm1.77 8.978c-.98 0-1.9-.186-2.762-.559a7.164 7.164 0 01-2.25-1.513 7.147 7.147 0 01-1.513-2.25A6.91 6.91 0 01.416 8c0-.98.186-1.9.558-2.762a7.164 7.164 0 011.514-2.25 7.148 7.148 0 012.249-1.513A6.91 6.91 0 017.499.916c.98 0 1.901.186 2.763.558a7.163 7.163 0 012.249 1.514 7.158 7.158 0 011.514 2.249c.372.862.558 1.782.558 2.762s-.186 1.901-.559 2.763a7.164 7.164 0 01-1.513 2.249 7.157 7.157 0 01-2.25 1.514 6.884 6.884 0 01-2.762.558zm0-1.417c1.57 0 2.908-.552 4.012-1.655 1.104-1.104 1.655-2.441 1.655-4.012 0-1.57-.552-2.907-1.655-4.01-1.104-1.105-2.441-1.657-4.012-1.656-1.57 0-2.907.551-4.01 1.655C2.383 5.092 1.831 6.428 1.832 8c0 1.57.551 2.908 1.655 4.012 1.104 1.104 2.44 1.655 4.011 1.655z" fill="currentColor" data-v-53105e2c=""></path></svg>
                                     Начать обучение
@@ -10120,7 +10120,7 @@
                                                 @if(!$user->courses()->where('course_id', $course->id)->exists())
                                                     <p data-v-6570bffa="" class="lessons-counter">перейти ( не доступно )</a>
                                                 @else
-                                                    <a href="{{ route('personal.lesson.index', ['lesson' => $lesson, 'course' => $course]) }}" data-v-6570bffa="" class="lessons-counter current">перейти</a>
+                                                    <a href="{{ route('user.lesson.index', ['lesson' => $lesson, 'course' => $course]) }}" data-v-6570bffa="" class="lessons-counter current">перейти</a>
                                                 @endif
                                             </div>
                                         </div>
@@ -10171,7 +10171,7 @@
                             <div data-v-00b6e9d8="" class="courses-wrapper">
                                 @foreach ($courses as $item)
                                     @if ($item->author == $course->author && $item->is_published == 1)
-                                        <a data-v-00b6e9d8="" href="{{ route('personal.course.index', $item->id) }}" aria-current="page" class="nuxt-link-exact-active nuxt-link-active course" style="background: {{ $item->color }};">
+                                        <a data-v-00b6e9d8="" href="{{ route('user.course.index', $item->id) }}" aria-current="page" class="nuxt-link-exact-active nuxt-link-active course" style="background: {{ $item->color }};">
                                             <div data-v-00b6e9d8=""
                                                 style="background-image: url(&quot;{{ '/storage/' . $item->preview_image }}&quot;);">
                                             </div>

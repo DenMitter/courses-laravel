@@ -1,4 +1,4 @@
-@extends('layouts.personal')
+@extends('layouts.user')
 
 @section('content')
 {{-- <div class="container">
@@ -130,7 +130,7 @@
                     <input type="checkbox" data-v-1acd173a="" id="checkbox">
                     <span class="checkbox_check" data-v-1acd173a=""></span>
                     <p data-v-1acd173a="">Я соглашаюсь с 
-                        <a href="https://wayup.in/offerta#personal" target="_blank" data-v-1acd173a="">политикой обработки данных</a> и 
+                        <a href="https://wayup.in/offerta#user" target="_blank" data-v-1acd173a="">политикой обработки данных</a> и 
                         <a href="https://wayup.in/offerta" target="_blank" data-v-1acd173a="">договором оферты</a>
                     </p>
                 </label>

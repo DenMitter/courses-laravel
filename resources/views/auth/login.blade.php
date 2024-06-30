@@ -1,4 +1,4 @@
-@extends('layouts.personal')
+@extends('layouts.user')
 
 @section('content')
 {{-- <div class="container">

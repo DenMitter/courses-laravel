@@ -10,7 +10,7 @@
                 <div class="courses" data-v-15d01916="">
                     @foreach ($courses as $course)
                         @if ($course->price == 0)
-                            <a href="{{ route('personal.course.index', $course->id) }}" class="course-card registered"
+                            <a href="{{ route('user.course.index', $course->id) }}" class="course-card registered"
                                 data-v-4c81e784="" data-v-15d01916="">
                                 <div class="image-wrapper" style="background:{{ $course->color }};" data-v-4c81e784="">
                                     <div class="course-image centered"
@@ -78,7 +78,7 @@
                 <div class="courses" data-v-15d01916="">
                     @foreach ($courses as $course)
                         @if ($course->price > 0)
-                            <a href="{{ route('personal.course.index', $course->id) }}" class="course-card registered"
+                            <a href="{{ route('user.course.index', $course->id) }}" class="course-card registered"
                                 data-v-4c81e784="" data-v-15d01916="">
                                 <div class="image-wrapper" style="background:{{ $course->color }};" data-v-4c81e784="">
                                     <div class="course-image centered"

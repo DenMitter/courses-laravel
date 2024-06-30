@@ -17,7 +17,7 @@
     <link data-n-head="ssr" rel="shortcut icon" href="favicon.png">
     <link data-n-head="ssr" href="https://mc.yandex.ru/metrika/tag.js" rel="preload" as="script">
     <script data-n-head="ssr" src="img\svg-sprite\svg-sprite.js"></script>
-    <link rel="stylesheet" href="{{ asset('css/personal.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/user.css') }}">
 
 <body>
     <div data-server-rendered="true" id="__nuxt">

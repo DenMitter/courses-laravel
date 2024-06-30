@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Personal\Course;
+namespace App\Http\Controllers\User\Course;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Lesson;
@@ -21,8 +21,8 @@ class IndexController extends Controller
         $date = Carbon::parse($course->starting);
         $userTime = Carbon::now()->addHours(2);
 
-        $studyStatus = DB::table('personal_course')->where('user_id', $user->id)->where('course_id', $course->id)->value('study_status');
+        $studyStatus = DB::table('user_course')->where('user_id', $user->id)->where('course_id', $course->id)->value('study_status');
 
-        return view('personal.course.index', compact('course', 'user', 'tags', 'lessons', 'courses', 'date', 'userTime', 'studyStatus', 'tests'));
+        return view('user.course.index', compact('course', 'user', 'tags', 'lessons', 'courses', 'date', 'userTime', 'studyStatus', 'tests'));
     }
 }

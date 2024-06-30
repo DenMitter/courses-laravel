@@ -58,7 +58,7 @@
                                     <div class="nav__info d-flex" data-v-f758cc66="">
                                         @auth
                                             <div class="header__user-menu_wrapper" data-v-20e9b6b4="" data-v-f758cc66="">
-                                                <a href="{{ route('personal.main.index') }}" class="nav__name" data-v-20e9b6b4="">{{ auth()->user()->name }}</a>
+                                                <a href="{{ route('user.main.index') }}" class="nav__name" data-v-20e9b6b4="">{{ auth()->user()->name }}</a>
                                                 <div class="header__user-menu" data-v-20e9b6b4="">
                                                     <div class="menu-wrapper" data-v-20e9b6b4="">
                                                         <ul class="slide-menu" data-v-20e9b6b4="">
@@ -92,7 +92,7 @@
                                                         </ul>
                                                     </div>
                                                     <div class="avatar-wrapper" data-v-20e9b6b4="">
-                                                        <a href="{{ route('personal.main.index') }}" class="button avatar" data-v-20e9b6b4="">
+                                                        <a href="{{ route('user.main.index') }}" class="button avatar" data-v-20e9b6b4="">
                                                             <img src="{{ asset('/img/default-photo.png') }}" alt="" data-v-20e9b6b4="">
                                                         </a>
                                                     </div>
@@ -183,7 +183,7 @@
                                     </div>
                                     <div class="form__policy" data-v-7b679a4e="" data-v-7b679a4e="">
                                         Натискаючи на цю кнопку, 
-                                        я даю згоду на обробку своїх <a href="/offerta#personal" target="_blank" data-v-7b679a4e="">персональних даних</a> 
+                                        я даю згоду на обробку своїх <a href="/offerta#user" target="_blank" data-v-7b679a4e="">персональних даних</a> 
                                         і погоджуюсь з <a href="/offerta" target="_blank" data-v-7b679a4e="">договором оферти</a>
                                     </div>
                                 </form>
@@ -198,9 +198,9 @@
                                 <div data-v-a5475f70="">
                                     <div class="footer__title">Студентам</div>
                                     <ul class="footer__menu">
-                                        <li><a href="{{ route('personal.main.index') }}">Навчання</a></li>
+                                        <li><a href="{{ route('user.main.index') }}">Навчання</a></li>
                                         <li><a href="rassrochka.html">Безвідсоткова розстрочка</a></li>
-                                        <li><a href="{{ route('personal.main.index') }}">Партнерська програма</a>
+                                        <li><a href="{{ route('user.main.index') }}">Партнерська програма</a>
                                         </li>
                                     </ul>
                                 </div>

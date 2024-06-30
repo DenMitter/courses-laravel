@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('personal_course', function (Blueprint $table) {
+        Schema::table('user_course', function (Blueprint $table) {
             $table->unsignedBigInteger('study_status')->default(0);
         });
     }
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('personal_course', function (Blueprint $table) {
+        Schema::table('user_course', function (Blueprint $table) {
             $table->dropColumn("study_status");
         });
     }

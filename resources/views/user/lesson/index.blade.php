@@ -3,7 +3,7 @@
 @section('content')
     <div data-v-06e4efb8="" class="wrapper df">
         <main data-v-06e4efb8="" class="main">
-            <div data-v-06e4efb8="" class="section-head mb_50 df"><a data-v-06e4efb8="" href="{{ route('personal.course.index', $course) }}" class="back-link"></a>
+            <div data-v-06e4efb8="" class="section-head mb_50 df"><a data-v-06e4efb8="" href="{{ route('user.course.index', $course) }}" class="back-link"></a>
                 <h2 data-v-06e4efb8="" class="main-title ts_25">До курсу</h2>
             </div>
             <section data-v-06e4efb8="" class="section-lesson">
@@ -105,7 +105,7 @@
                                                             {{ $lessonItem->title }}
                                                         </span>
                                                     </h3>
-                                                    <a href="{{ route('personal.lesson.index', ['lesson' => $lessonItem, 'course' => $course->id]) }}" data-v-6570bffa="" class="lessons-counter current">перейти</a>
+                                                    <a href="{{ route('user.lesson.index', ['lesson' => $lessonItem, 'course' => $course->id]) }}" data-v-6570bffa="" class="lessons-counter current">перейти</a>
                                                 </div>
                                             </div>
                                         </div>
