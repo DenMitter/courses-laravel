@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\Main\IndexController')->name('main.index');
 Route::post('/message', 'App\Http\Controllers\Main\MessageController')->name('main.index.message');
 Route::post('/subscribe', 'App\Http\Controllers\Main\NewsletterSubscribeController')->name('main.index.subscribe');
+Route::post('/help', 'App\Http\Controllers\Main\HelpController')->name('main.index.help');
 Route::get('/webinars', 'App\Http\Controllers\Main\WebinarsController')->name('main.webinars');
 Route::get('/blog', 'App\Http\Controllers\Main\BlogController')->name('main.blog');
 Route::get('/about', 'App\Http\Controllers\Main\AboutController')->name('main.about');
@@ -60,6 +61,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin', 'verified']
             Route::patch('/{lesson}', 'App\Http\Controllers\Admin\Course\Lesson\UpdateController')->name('admin.course.lesson.update');
             Route::delete('/{lesson}', 'App\Http\Controllers\Admin\Course\Lesson\DeleteController')->name('admin.course.lesson.delete');
         });
+
+        Route::group(['prefix' => 'test'], function () {
+            Route::get('/', 'App\Http\Controllers\Admin\Course\Test\IndexController')->name('admin.course.test.index');
+            Route::get('/create/{course}', 'App\Http\Controllers\Admin\Course\Test\CreateController')->name('admin.course.test.create');
+            Route::post('/{course}', 'App\Http\Controllers\Admin\Course\Test\StoreController')->name('admin.course.test.store');
+            Route::get('/{test}', 'App\Http\Controllers\Admin\Course\Test\ShowController')->name('admin.course.test.show');
+            Route::get('/{test}/edit', 'App\Http\Controllers\Admin\Course\Test\EditController')->name('admin.course.test.edit');
+            Route::patch('/{test}', 'App\Http\Controllers\Admin\Course\Test\UpdateController')->name('admin.course.test.update');
+            Route::delete('/{test}', 'App\Http\Controllers\Admin\Course\Test\DeleteController')->name('admin.course.test.delete');
+        });
     });
     
     Route::group(['prefix' => 'user'], function () {
@@ -88,8 +99,29 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin', 'verified']
         Route::post('/', 'App\Http\Controllers\Admin\Newsletter\StoreController')->name('admin.newsletter.store');
         Route::get('/{newsletter}', 'App\Http\Controllers\Admin\Newsletter\ShowController')->name('admin.newsletter.show');
         Route::get('/{newsletter}/edit', 'App\Http\Controllers\Admin\Newsletter\EditController')->name('admin.newsletter.edit');
-        Route::patch('/{newsletter}', 'App\Http\Controllers\Admin\Newsletter\UpdateController')->name('admin.newsletter.update');
+        // Route::patch('/{newsletter}', 'App\Http\Controllers\Admin\Newsletter\UpdateController')->name('admin.newsletter.update');
         Route::delete('/{newsletter}', 'App\Http\Controllers\Admin\Newsletter\DeleteController')->name('admin.newsletter.delete');
+    });
+
+    Route::group(['prefix' => 'blog'], function () {
+        Route::get('/', 'App\Http\Controllers\Admin\Blog\IndexController')->name('admin.blog.index');
+        Route::get('/create', 'App\Http\Controllers\Admin\Blog\CreateController')->name('admin.blog.create');
+        Route::post('/', 'App\Http\Controllers\Admin\Blog\StoreController')->name('admin.blog.store');
+        Route::get('/{post}', 'App\Http\Controllers\Admin\Blog\ShowController')->name('admin.blog.show');
+        Route::get('/{post}/edit', 'App\Http\Controllers\Admin\Blog\EditController')->name('admin.blog.edit');
+        Route::patch('/{post}', 'App\Http\Controllers\Admin\Blog\UpdateController')->name('admin.blog.update');
+        Route::delete('/{post}', 'App\Http\Controllers\Admin\Blog\DeleteController')->name('admin.blog.delete');
+    });
+
+    Route::group(['prefix' => 'student'], function () {
+        Route::get('/', 'App\Http\Controllers\Admin\Student\IndexController')->name('admin.student.index');
+    });
+
+    Route::group(['prefix' => 'teacher'], function () {
+        Route::get('/', 'App\Http\Controllers\Admin\Teacher\IndexController')->name('admin.teacher.index');
+        Route::get('/{teacher}', 'App\Http\Controllers\Admin\Teacher\ShowController')->name('admin.teacher.show');
+        Route::get('/{teacher}/edit', 'App\Http\Controllers\Admin\Teacher\EditController')->name('admin.teacher.edit');
+        Route::patch('/{teacher}', 'App\Http\Controllers\Admin\Teacher\UpdateController')->name('admin.teacher.update');
     });
 });
 

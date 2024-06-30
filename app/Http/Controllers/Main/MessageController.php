@@ -11,7 +11,7 @@ class MessageController extends Controller
 {
     public function __invoke(MessageRequest $request)
     {
-        if($request->ajax()){
+        // if($request->ajax()){
             $data = $request->validated();
 
             $token = env('TELEGRAM_BOT_TOKEN');
@@ -24,28 +24,28 @@ class MessageController extends Controller
 
             $client = new Client(['base_uri' => 'https://api.telegram.org/bot' . $token . '/']);
 
-            // $response = $client->request('POST', 'sendMessage', [
-            //     'json' => [
-            //         'chat_id' => $chatId,
-            //         'text' => $message,
-            //         'parse_mode' => 'HTML'
-            //     ]
-            // ]);
+            $response = $client->request('POST', 'sendMessage', [
+                'json' => [
+                    'chat_id' => $chatId,
+                    'text' => $message,
+                    'parse_mode' => 'HTML'
+                ]
+            ]);
 
             $response = array(
                 'status' => 'success',
                 'msg' => 'Setting created successfully',
             );
             // return Response::json($response);
-            return 'yes';
+            // return 'yes';
 
             // Обробка відповіді, якщо потрібно
             // $statusCode = $response->getStatusCode();
             // $body = $response->getBody()->getContents();;
-        }
-        else{
-            return 'no';
-        }
-        // return redirect()->route('main.index');
+        // }
+        // else{
+        //     return 'no';
+        // }
+        return back();
     }
 }

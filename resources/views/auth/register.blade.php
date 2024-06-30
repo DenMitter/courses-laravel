@@ -77,7 +77,7 @@
 <div class="wrapper" data-v-0569d440="">
     <main class="main" data-v-0569d440="">
     <section class="section-form" data-v-1acd173a="" data-v-0569d440="">
-        <h2 class="section-form__title" data-v-1acd173a=""><span data-v-1acd173a="">476 081</span> уже зарегистрировались</h2>
+        <h2 class="section-form__title" data-v-1acd173a=""><span data-v-1acd173a="">476 081</span> вже зареєструвались</h2>
         <form class="form" data-v-1acd173a="" method="POST" action="{{ route('register') }}">
             @csrf
             <div class="form__head" data-v-1acd173a="">

@@ -57,8 +57,8 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Ціна курсу</label>
-              <input name="price" type="number" class="form-control" placeholder="Ціна курсу" value="{{ old('price') }}">
+              <label>Ціна за один урок</label>
+              <input name="price" type="number" class="form-control" placeholder="Ціна за один урок" value="{{ old('price') }}">
               @error('price')
                 <p class="text-danger">Це поле має бути заповненим</p>
               @enderror
@@ -71,28 +71,42 @@
               @enderror
             </div>
             <div class="d-flex p-0 w-100">
-              <div class="form-group w-100">
+              {{-- <div class="form-group w-100">
                 <label>Дата старту</label>
                 <input name="starting" type="date" class="form-control" placeholder="Дата старту" value="{{ old('starting') }}">
                 @error('starting')
                   <p class="text-danger">Це поле має бути заповненим</p>
                 @enderror
+              </div> --}}
+              <div class="form-group w-100">
+                <label>Кількість уроків</label>
+                <input name="lesson_count" type="text" class="form-control" placeholder="Кількість уроків" value="{{ old('lesson_count') }}">
+                @error('lesson_count')
+                  <p class="text-danger">Це поле має бути заповненим</p>
+                @enderror
               </div>
               <div class="form-group ml-2 w-100">
+                <label>Основний колір</label>
+                <input name="color" type="color" class="form-control" value="{{ old('color') }}">
+                @error('color')
+                  <p class="text-danger">Це поле має бути заповненим</p>
+                @enderror
+              </div>
+              {{-- <div class="form-group ml-2 w-100">
                 <label>Як довго буде йти курс</label>
                 <input name="during" type="text" class="form-control" placeholder="1 тиждень" value="{{ old('during') }}">
                 @error('during')
                   <p class="text-danger">Це поле має бути заповненим</p>
                 @enderror
-              </div>
+              </div> --}}
             </div>
-            <div class="form-group">
+            {{-- <div class="form-group">
               <label>Основний колір</label>
               <input name="color" type="color" class="form-control" value="{{ old('color') }}">
               @error('color')
                 <p class="text-danger">Це поле має бути заповненим</p>
               @enderror
-            </div>
+            </div> --}}
             <div class="form-check">
               <input name="is_published" type="checkbox" class="form-check-input" value="1">
               <label class="form-check-label" for="exampleCheck1">Публічний курс</label>

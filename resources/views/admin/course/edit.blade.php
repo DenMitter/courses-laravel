@@ -56,8 +56,8 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Ціна курсу</label>
-              <input name="price" type="number" class="form-control" placeholder="Ціна курсу" value="{{ $course->price }}">
+              <label>Ціна за один урок</label>
+              <input name="price" type="number" class="form-control" placeholder="Ціна за один урок" value="{{ $course->price }}">
               @error('price')
                 <p class="text-danger">Це поле має бути заповненим</p>
               @enderror
@@ -71,26 +71,19 @@
             </div>
             <div class="d-flex p-0 w-100">
               <div class="form-group w-100">
-                <label>Дата старту</label>
-                <input name="starting" type="date" class="form-control" placeholder="Дата старту" value="">
-                @error('starting')
+                <label>Кількість уроків</label>
+                <input name="lesson_count" type="text" class="form-control" placeholder="Кількість уроків" value="{{ $course->lesson_count }}">
+                @error('lesson_count')
                   <p class="text-danger">Це поле має бути заповненим</p>
                 @enderror
               </div>
               <div class="form-group ml-2 w-100">
-                <label>Як довго буде йти курс</label>
-                <input name="during" type="text" class="form-control" placeholder="1 тиждень" value="{{ $course->during }}">
-                @error('during')
+                <label>Основний колір</label>
+                <input name="color" type="color" class="form-control" value="{{ $course->color }}">
+                @error('color')
                   <p class="text-danger">Це поле має бути заповненим</p>
                 @enderror
               </div>
-            </div>
-            <div class="form-group">
-              <label>Основний колір</label>
-              <input name="color" type="color" class="form-control" placeholder="Ціна курсу" value="{{ $course->color }}">
-              @error('color')
-                <p class="text-danger">Це поле має бути заповненим</p>
-              @enderror
             </div>
             <div class="form-check">
               <input name="is_published" type="checkbox" class="form-check-input" value="1" {{ $course->is_published ? 'checked' : '' }}>

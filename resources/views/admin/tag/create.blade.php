@@ -34,6 +34,13 @@
                 <p class="text-danger">Це поле має бути заповненим</p>
               @enderror
             </div>
+            <div class="form-group">
+              <label>Фоновий колір</label>
+              <input name="color" type="color" class="form-control" value="{{ old('color') }}">
+              @error('color')
+                <p class="text-danger">Це поле має бути заповненим</p>
+              @enderror
+            </div>
           </div>
           <!-- /.card-body -->
 

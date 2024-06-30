@@ -28,6 +28,13 @@
               </tr>
             </tbody>
           </table>
+          <table class="table table-bordered text-center">
+            <tbody>
+              <tr>
+                <td><a href="{{ route('admin.course.test.create', $course->id) }}" type="button" class="btn btn-block btn-danger btn-sm">Додати тест</a></td>
+              </tr>
+            </tbody>
+          </table>
           <div class="card">
             <!-- /.card-header -->
             <div class="card-body table-responsive p-0">
@@ -46,8 +53,8 @@
                     <td>{{ $course->is_published ? "Публічний" : "Приватний" }}</td>
                   </tr>
                   <tr>
-                    <td>Ціна курсу</td>
-                    <td>{{ $course->price ? '$' . $course->price : "Безкоштовний" }}</td>
+                    <td>Ціна за один урок</td>
+                    <td>{{ $course->price ? $course->price . ' грн' : "Безкоштовний" }}</td>
                   </tr>
                   <tr>
                     <td>Теги</td>
@@ -66,13 +73,23 @@
                     <td>{{ $course->description }}</td>
                   </tr>
                   <tr>
+                    <td>Кількість уроків</td>
+                    <td>{{ $course->lesson_count }}</td>
+                  </tr>
+                  <tr>
+                    <td>Основний колір</td>
+                    <td>
+                      <span class="show-tags mr-1" style="background-color: {{ $course->color }}"></span>
+                    </td>
+                  </tr>
+                  {{-- <tr>
                     <td>Дата старту</td>
                     <td>{{ $course->starting }}</td>
                   </tr>
                   <tr>
                     <td>Як довго буде йти курс</td>
                     <td>{{ $course->during }}</td>
-                  </tr>
+                  </tr> --}}
                 </tbody>
               </table>
             </div>
@@ -121,6 +138,45 @@
             <!-- /.card-body -->
           </div>
           <!-- /.card -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Список тестів</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Назва</th>
+                    <th colspan="3" class="text-center">Дія</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach ($tests as $test)
+                    @if (is_array($course->tests->pluck('id')->toArray()) && in_array($test->id, $course->tests->pluck('id')->toArray()))
+                      <tr>
+                        <td>{{ $test->id }}</td>
+                        <td>{{ $test->title }}</td>
+                        <td><a href="{{ route('admin.course.test.show', $test) }}"><i class="far fa-eye"></i></a></td>
+                          <td><a href="{{ route('admin.course.test.edit', $test) }}" class="text-success"><i class="fas fa-pencil-alt"></i></a></td>
+                          <td>
+                            <form action="{{ route('admin.course.test.delete', $test) }}" method="POST">
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="border-0 bg-transparent">
+                                <i class="fas fa-trash text-danger" role="button"></i>
+                              </button>
+                            </form>
+                          </td>
+                      </tr>
+                    @endif
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
         </div>
       </div>
     </div>

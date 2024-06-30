@@ -69,12 +69,69 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('admin.newsletter.create') }}" class="nav-link">
+                  <ion-icon name="ellipse-outline"></ion-icon>
                   <p>Створити розсилку</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('admin.newsletter.index') }}" class="nav-link">
+                  <ion-icon name="ellipse-outline"></ion-icon>
                   <p>Усі розсилки</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <ion-icon name="bulb-outline"></ion-icon>
+              <p>
+                Блог
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('admin.blog.create') }}" class="nav-link">
+                  <ion-icon name="ellipse-outline"></ion-icon>
+                  <p>Створити пост</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.blog.index') }}" class="nav-link">
+                  <ion-icon name="ellipse-outline"></ion-icon>
+                  <p>Усі пости</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav-item pb-3 mb-3 user-panel"></li>
+
+          <li class="nav-item">
+            <a href="{{ route('admin.teacher.index') }}" class="nav-link">
+              <ion-icon name="home-outline"></ion-icon>
+              <p>Викладачі</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <ion-icon name="book-outline"></ion-icon>
+              <p>
+                Студенти
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('admin.student.index') }}" class="nav-link">
+                  <ion-icon name="ellipse-outline"></ion-icon>
+                  <p>Список студентів</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.blog.create') }}" class="nav-link">
+                  <ion-icon name="ellipse-outline"></ion-icon>
+                  <p>Домашні завдання</p>
                 </a>
               </li>
             </ul>

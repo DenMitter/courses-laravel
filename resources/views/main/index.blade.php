@@ -108,7 +108,7 @@
         <section id="header" class="index-header container" data-v-0293901a="">
             <div class="blue-blur" data-v-0293901a=""></div>
             <div class="green-blur" data-v-0293901a=""></div>
-            <h1 data-v-0293901a="">Навчання англійської.</h1>
+            <h1 data-v-0293901a="">Вивчення англійської.</h1>
             <ul data-v-0293901a="">
                 <li data-v-0293901a="">Вчися<img src="/img/emoji/student-hat.png" alt="🎓" data-v-0293901a=""></li>
                 <li data-v-0293901a="">Працюй<img src="/img/emoji/laptop.png" alt="💻" data-v-0293901a=""></li>
@@ -140,7 +140,7 @@
                             <div class="courses__top d-flex">
                                 <h3>Основи безкоштовно</h3>
                                 <div class="courses__dropdown">
-                                    <span>За датою старту<img src="/img/ar-down-select.svg" alt=""></span>
+                                    <span>За датою старту</span>
                                     <!-- <span></span> -->
                                 </div>
                             </div>
@@ -162,11 +162,10 @@
                                             </div>
                                             <h4 class="courses__title">{{ $course->title }}</h4>
                                             <div class="courses__bottom d-flex">
-                                                <div class="courses__date">{{ $date->isoFormat('Do MMMM') }}</div>
+                                                {{-- <div class="courses__date">{{ $date->isoFormat('Do MMMM') }}</div> --}}
                                                 <div class="courses__duration">{{ $course->during }}</div>
                                             </div>
                                         </div>
-                                        <img src="/img/ar-right-courses.svg" alt="" class="courses__arrow">
                                     </a>
                                 @endif
                             @endforeach
@@ -175,7 +174,7 @@
                             <div class="courses__top d-flex">
                                 <h3>Від основ до професії</h3>
                                 <div class="courses__dropdown">
-                                    <span>За датою старту<img src="/img/ar-down-select.svg" alt=""></span>
+                                    <span>За датою старту</span>
                                     <!-- <span></span> -->
                                 </div>
                             </div>
@@ -195,14 +194,14 @@
                                                 @endif
                                              @endforeach
                                             </div>
-                                            <h4 class="courses__title">{{ $course->title }}</h4>
+                                            <h4 class="courses__title">{{ $course->title }} <span class="courses__duration">( {{ $course->lesson_count }} уроків )</span></h4>
                                             <div class="courses__bottom d-flex">
-                                                <div class="courses__date">{{ $date->isoFormat('Do MMMM') }}</div>
-                                                <div class="courses__duration">{{ $course->during }}</div>
+                                                {{-- <div class="courses__date">{{ $date->isoFormat('Do MMMM') }}</div> --}}
+                                                {{-- <div class="courses__duration">{{ $course->during }}</div> --}}
+                                                <div class="courses__duration">{{ $course->price }}грн за урок</div>
                                                 <div class="courses__discount">-10 %</div>
                                             </div>
                                         </div>
-                                        <img src="/img/ar-right-courses.svg" alt="" class="courses__arrow">
                                     </a>
                                 @endif
                             @endforeach

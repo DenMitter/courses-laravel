@@ -29,9 +29,16 @@
           @method('PATCH')
           <div class="card-body">
             <div class="form-group">
-              <label for="exampleInputEmail1">Назва</label>
+              <label>Назва</label>
               <input name="title" type="text" class="form-control" placeholder="Назва тега" value="{{ $tag->title }}">
               @error('title')
+                <p class="text-danger">Це поле має бути заповненим</p>
+              @enderror
+            </div>
+            <div class="form-group">
+              <label>Фоновий колір</label>
+              <input name="color" type="color" class="form-control" value="{{ $tag->color }}">
+              @error('color')
                 <p class="text-danger">Це поле має бути заповненим</p>
               @enderror
             </div>

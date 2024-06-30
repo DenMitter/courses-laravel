@@ -14,14 +14,27 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
+    const ROLE_STUDENT = 3;
+    const ROLE_TEACHER = 2;
     const ROLE_ADMIN = 1;
     const ROLE_GUEST = 0;
 
     public static function getRoles() {
         return [
+            self::ROLE_STUDENT => "Студент",
+            self::ROLE_TEACHER => "Викладач",
             self::ROLE_ADMIN => "Адміністратор",
             self::ROLE_GUEST => "Гість"
         ];
+    }
+
+    public static function getRole($role) {
+        switch($role) {
+            case 0: return "Гість";
+            case 1: return "Адміністратор";
+            case 2: return "Викладач";
+            case 3: return "Студент";
+        }
     }
 
     /**

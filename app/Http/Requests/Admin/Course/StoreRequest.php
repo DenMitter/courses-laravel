@@ -30,8 +30,9 @@ class StoreRequest extends FormRequest
             'price' => 'integer',
             'color' => 'string',
             'description' => 'required|string',
-            'starting' => 'required|string',
-            'during' => 'required|string',
+            'lesson_count' => 'required|string',
+            // 'starting' => 'required|string',
+            // 'during' => 'required|string',
         ];
     }
 }

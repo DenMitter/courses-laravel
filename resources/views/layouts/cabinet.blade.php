@@ -57,10 +57,10 @@
                         <div class="footer-item__label" data-v-f000587e="">Нужна помощь</div>
                         <div class="footer-item__tooltip" data-v-f000587e="">
                             <div class="tooltip-content" data-v-f000587e="">
-                                <a href="tel:0800336567" class="phone" data-v-f000587e="">
-                                    <img src="{{ asset('img/ukraine.png') }}" alt="" class="flag" data-v-f000587e="">0 (800) 33-65-67
+                                <a href="tel:{{ env('RETURN_PHONE') }}" class="phone" data-v-f000587e="">
+                                    <img src="{{ asset('img/ukraine.png') }}" alt="" class="flag" data-v-f000587e="">{{ env('RETURN_PHONE') }}
                                 </a>
-                                <a href="mailto:reg@wayup.in" target="_blank" data-v-f000587e="">reg@wayup.in</a>
+                                <a href="mailto:{{ env('RETURN_EMAIL') }}" target="_blank" data-v-f000587e="">{{ env('RETURN_EMAIL') }}</a>
                             </div>
                         </div>
                     </div>

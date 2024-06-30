@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                   <td>Роль</td>
-                  <td>{{ $user->role ? 'Адміністратор' : 'Гість' }}</td>
+                  <td>{{ $user->getRole($user->role) }}</td>
                 </tr>
               </tbody>
             </table>

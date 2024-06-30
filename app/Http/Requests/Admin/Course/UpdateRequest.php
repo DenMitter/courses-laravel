@@ -30,8 +30,9 @@ class UpdateRequest extends FormRequest
             'price' => 'integer',
             'color' => 'string',
             'description' => 'required|string',
-            'starting' => 'string',
-            'during' => 'required|string',
+            'lesson_count' => 'required|string',
+            // 'starting' => 'string',
+            // 'during' => 'required|string',
         ];
     }
 }

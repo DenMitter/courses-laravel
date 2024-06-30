@@ -16,7 +16,6 @@
         content="https://FAVORITE ENGLISH.in/img/og/FAVORITE ENGLISH.jpg">
     <meta data-n-head="ssr" data-hid="og:type" property="og:type" content="website">
     <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png">
-    <link data-n-head="ssr" href="https://mc.yandex.ru/metrika/tag.js" rel="preload" as="script">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/course.css') }}">
     <!-- Tempusdominus Bootstrap 4 -->
@@ -42,9 +41,9 @@
                                     <li data-v-da47e56e="">
                                         <a href="{{ route('main.index') }}" aria-current="page" class="nuxt-link-exact-active nuxt-link-active" data-v-da47e56e="">Головна</a>
                                     </li>
-                                    <li data-v-da47e56e="">
+                                    {{-- <li data-v-da47e56e="">
                                         <a href="{{ route('main.webinars') }}" active-class="nuxt-link-exact-active" data-v-da47e56e="">Події</a>
-                                    </li>
+                                    </li> --}}
                                     <li data-v-da47e56e="">
                                         <a href="{{ route('main.blog') }}" active-class="nuxt-link-exact-active" data-v-da47e56e="">Журнал</a>
                                     </li>
@@ -78,11 +77,17 @@
                                                             <a href="https://my.wayup.in/partner" class="button" data-v-20e9b6b4="" data-tooltip="Партнерська програма" style="position: relative; cursor: pointer;">
                                                                 <svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" data-v-20e9b6b4="" class=""><path d="M10.263.5a.61.61 0 00-.487.239l-.11.085a6.269 6.269 0 00-6.32 1.514 6.058 6.058 0 00-1.55 2.543c-.3.968-.357 1.999-.166 2.996-.021.02-.042.039-.062.06L.595 8.9a1.968 1.968 0 00-.44.65 2.016 2.016 0 00.44 2.203 2.04 2.04 0 001.827.555 2.038 2.038 0 001.936 1.604c.013.498.212.991.595 1.372.383.38.883.578 1.384.59.013.498.213.993.596 1.373.367.359.847.568 1.353.59a2.053 2.053 0 001.395-.471l.546.54a2.057 2.057 0 002.893 0c.382-.379.58-.87.598-1.366a2.03 2.03 0 001.969-1.956 2.037 2.037 0 001.92-1.649c.32.058.65.038.963-.06.312-.097.598-.268.834-.5.188-.184.338-.405.44-.65a2.018 2.018 0 000-1.554 1.969 1.969 0 00-.44-.65l-.899-.89.184-.708a5.921 5.921 0 00-.525-4.287 5.97 5.97 0 00-5.257-3.13H11.37A3.956 3.956 0 0011.173.5h-.91zm3.062 4.776l3.002 2.978.004.002 2.173 2.157a.74.74 0 01.223.535.757.757 0 01-.763.757c-.2 0-.394-.08-.54-.222l-1.649-1.635a.64.64 0 00-.898 0l-.018.016a.615.615 0 00-.186.446.63.63 0 00.186.446l1.286 1.275c.3.295.3.776 0 1.073a.77.77 0 01-.999.07.64.64 0 00-.835.06.625.625 0 00-.051.829.752.752 0 01-.067.996.77.77 0 01-1.011.062.64.64 0 00-.842.048.625.625 0 00-.054.833.763.763 0 01-.066 1.013.783.783 0 01-.547.224c-.204 0-.4-.08-.547-.224l-.54-.536.196-.196a1.97 1.97 0 00.441-.65 2.018 2.018 0 000-1.554A2.037 2.037 0 009.4 12.837a2.004 2.004 0 00-.595-1.372 2.037 2.037 0 00-1.384-.59 2.003 2.003 0 00-.596-1.372 2.071 2.071 0 00-.848-.504 2.027 2.027 0 00-.978-.05 2.004 2.004 0 00-.553-1.013 2.068 2.068 0 00-.745-.47c-.278-.101-.574-.14-.868-.113a4.938 4.938 0 01.224-2.237A4.82 4.82 0 014.243 3.23 5.043 5.043 0 016.14 2.052a4.931 4.931 0 012.205-.23L6.53 3.195a2.167 2.167 0 00-.576.649A2.231 2.231 0 005.73 5.55a2.244 2.244 0 001.85 1.637 2.21 2.21 0 001.63-.423l1.967-1.487h2.147l.001-.001zM7.269 4.23l3.235-2.446h.669c.061 0 .122.002.184.005h1.55a4.73 4.73 0 014.166 2.47 4.604 4.604 0 01.409 3.334l-.004.013-3.445-3.428a.615.615 0 00-.44-.188H10.97a.612.612 0 00-.368.124L8.47 5.727a.988.988 0 01-1.537-.517.93.93 0 01.093-.71.894.894 0 01.242-.27zm.551 11.065l.013-.012.97-.964.012-.01a.773.773 0 011.069.01.737.737 0 01.223.536.757.757 0 01-.223.536l-.973.963a.773.773 0 01-.54.222.773.773 0 01-.703-.462.756.756 0 01.151-.819h.001zm.096-1.879l-.012.012-.971.964-.013.011a.772.772 0 01-1.067-.012.738.738 0 01-.223-.53.756.756 0 01.214-.532l.009-.009.971-.964.009-.009a.773.773 0 01.537-.213.773.773 0 01.698.462.756.756 0 01-.152.82zm-1.99-1.952l-.973.964-.009.01a.772.772 0 01-1.07-.01.738.738 0 01-.224-.535.757.757 0 01.223-.536l.971-.963a.773.773 0 01.54-.222.773.773 0 01.706.463.756.756 0 01-.156.822l-.009.007zM3.545 9.9l-.97.964a.772.772 0 01-.541.222.772.772 0 01-.707-.467.757.757 0 01.166-.827l.973-.964a.773.773 0 011.08 0 .738.738 0 01.223.536.757.757 0 01-.224.536z" fill="currentColor" data-v-20e9b6b4=""></path></svg>
                                                             </a>
-                                                            @if (auth()->user()->role == 1)
+
+                                                            @can('view', auth()->user())
                                                                 <a href="{{ route('admin.main.index') }}" class="button" data-v-20e9b6b4="" data-tooltip="Адмін панель" style="position: relative; cursor: pointer;">
                                                                     <img src="{{ asset('/img/header/settings.svg') }}" alt="" data-v-20e9b6b4="">
                                                                 </a>
-                                                            @endif
+                                                            @endcan
+                                                            {{-- @if (auth()->user()->role == 1 || auth()->user()->role == 2)
+                                                                <a href="{{ route('admin.main.index') }}" class="button" data-v-20e9b6b4="" data-tooltip="Адмін панель" style="position: relative; cursor: pointer;">
+                                                                    <img src="{{ asset('/img/header/settings.svg') }}" alt="" data-v-20e9b6b4="">
+                                                                </a>
+                                                            @endif --}}
                                                             <li class="button fake" data-v-20e9b6b4=""></li>
                                                         </ul>
                                                     </div>
@@ -144,12 +149,12 @@
                     <div class="container" data-v-a5475f70="">
                         <div class="footer__box d-flex" data-v-a5475f70="">
                             <div class="footer__col" data-v-a5475f70="">
-                                <a href="index.htm" class="nuxt-link-active footer__logo" data-v-a5475f70=""><img  src="/img/footer-logo.png" alt="" data-v-a5475f70=""></a>
+                                <a href="{{ route('main.index') }}" class="nuxt-link-active footer__logo" data-v-a5475f70=""><img src="{{ asset('img/footer-logo.png') }}" alt="" data-v-a5475f70=""></a>
                                 <div class="footer__socials d-flex" data-v-a5475f70="">
-                                        <a href="https://www.instagram.com/FAVORITE ENGLISH.in.official" target="_blank" class="footer__link"><img src="/img/icon-insta.svg" alt=""></a>
-                                        <a href="https://www.youtube.com/c/FAVORITE ENGLISHin" target="_blank" class="footer__link"><img src="/img/icon-youtube.svg" alt=""></a>
-                                        <a href="tg://resolve?domain=freelanceFAVORITE ENGLISH" target="_blank" class="footer__link"><img src="/img/icon-tg.svg" alt=""></a>
-                                        <a href="https://www.facebook.com/FAVORITE ENGLISH.in" target="_blank" class="footer__link"><img src="/img/icon-fb.svg" alt=""></a>
+                                        <a href="https://www.instagram.com/FAVORITE ENGLISH.in.official" target="_blank" class="footer__link"><img src="{{ asset('img/icon-insta.svg') }}" alt=""></a>
+                                        <a href="https://www.youtube.com/c/FAVORITE ENGLISHin" target="_blank" class="footer__link"><img src="{{ asset('img/icon-youtube.svg') }}" alt=""></a>
+                                        <a href="tg://resolve?domain=freelanceFAVORITE ENGLISH" target="_blank" class="footer__link"><img src="{{ asset('img/icon-tg.svg') }}" alt=""></a>
+                                        <a href="https://www.facebook.com/FAVORITE ENGLISH.in" target="_blank" class="footer__link"><img src="{{ asset('img/icon-fb.svg') }}" alt=""></a>
                                     </div>
                                 <div class="footer__copyright" data-v-a5475f70="">2024 - 2024 © {{ config('app.name', 'Laravel') }}</div>
                                 <a href="offerta.html" class="footer__oferta" data-v-a5475f70="">Договір оферти</a>
@@ -158,7 +163,7 @@
                                 <div class="footer__title">Основне</div>
                                 <ul class="footer__menu">
                                     <li><a href="{{ route('main.index') }}" class="nuxt-link-active">Головна</a></li>
-                                    <li><a href="{{ route('main.webinars') }}">Події</a></li>
+                                    {{-- <li><a href="{{ route('main.webinars') }}">Події</a></li> --}}
                                     <li><a href="{{ route('main.blog') }}">Журнал</a></li>
                                     <li><a href="{{ route('main.about') }}" aria-current="page" class="nuxt-link-exact-active nuxt-link-active">Про платформу</a></li>
                                     <li><a href="{{ route('main.contacts') }}">Контакти</a></li>
@@ -173,7 +178,7 @@
                                     <div class="form-group" data-v-7b679a4e="" data-v-7b679a4e="">
                                         <input name="email" type="email" placeholder="E-mail" autocomplete="off" value="" class="form__field" data-v-7b679a4e="">
                                         <button type="submit"  class="footer__btn footer__btn_step" data-v-7b679a4e="">
-                                            <img src="/img/subscribe-arrow-right.svg" alt="" data-v-7b679a4e="">
+                                            <img src="{{ asset('img/subscribe-arrow-right.svg') }}" alt="" data-v-7b679a4e="">
                                         </button>
                                     </div>
                                     <div class="form__policy" data-v-7b679a4e="" data-v-7b679a4e="">
@@ -184,19 +189,18 @@
                                 </form>
                             </div>
                             <div class="footer__col" data-v-a5475f70="">
-                                <div data-v-953e7714="" data-v-a5475f70=""><a href="tel:0800336567"
-                                        class="footer__tel" data-v-953e7714=""><img src="/img/flag-ukraine.png"
-                                            alt="" data-v-953e7714="">0 (800) 33-65-67</a><a
-                                        href="mailto:reg@FAVORITE ENGLISH.in" target="_blank" class="footer__mail"
-                                        data-v-953e7714="">reg@FAVORITE ENGLISH.in</a>
-                                    <div style="display:none;" data-v-953e7714="">UA</div>
+                                <div class="tooltip-content" data-v-f000587e="">
+                                    <a href="tel:{{ env('RETURN_PHONE') }}" class="phone" data-v-f000587e="">
+                                        <img src="{{ asset('img/ukraine.png') }}" alt="" class="flag" data-v-f000587e="">{{ env('RETURN_PHONE') }}
+                                    </a>
+                                    <a href="mailto:{{ env('RETURN_EMAIL') }}" target="_blank" data-v-f000587e="">{{ env('RETURN_EMAIL') }}</a>
                                 </div>
                                 <div data-v-a5475f70="">
                                     <div class="footer__title">Студентам</div>
                                     <ul class="footer__menu">
-                                        <li><a href="https://my.FAVORITE ENGLISH.in">Навчання</a></li>
+                                        <li><a href="{{ route('personal.main.index') }}">Навчання</a></li>
                                         <li><a href="rassrochka.html">Безвідсоткова розстрочка</a></li>
-                                        <li><a href="https://my.FAVORITE ENGLISH.in/partner">Партнерська програма</a>
+                                        <li><a href="{{ route('personal.main.index') }}">Партнерська програма</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -233,7 +237,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                            <button data-v-0c1d1295="" data-v-8c9ccc04="" class="btn variant-blue disabled popup-btn" disabled="" type="submit" id="submitButton">
+                            <button data-v-0c1d1295="" data-v-8c9ccc04="" class="btn variant-blue disabled popup-btn modal__submit-button" disabled="" type="submit">
                                 <div data-v-0c1d1295="" class="btn-content">
                                   <svg data-v-8c9ccc04="" data-v-0c1d1295="" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" width="25" class=""><path data-v-8c9ccc04="" data-v-0c1d1295="" d="M4 12.5h16M13 5.5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                 </div>
@@ -272,7 +276,7 @@
                                 </span>
                             @enderror
                             <input type="password" name="password_confirmation" class="modal-input" placeholder="Підтвердження паролю" style="margin-bottom: 20px" value="{{ old('password_confirmation') }}">
-                            <button data-v-0c1d1295="" data-v-8c9ccc04="" class="btn variant-blue popup-btn" type="submit" id="submitButton">
+                            <button data-v-0c1d1295="" data-v-8c9ccc04="" class="btn variant-blue popup-btn modal__submit-button" type="submit">
                                 <div data-v-0c1d1295="" class="btn-content">
                                   <svg data-v-8c9ccc04="" data-v-0c1d1295="" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" width="25" class=""><path data-v-8c9ccc04="" data-v-0c1d1295="" d="M4 12.5h16M13 5.5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                 </div>
@@ -295,7 +299,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                            <button data-v-0c1d1295="" data-v-8c9ccc04="" class="btn variant-blue popup-btn" type="submit" id="submitButton">
+                            <button data-v-0c1d1295="" data-v-8c9ccc04="" class="btn variant-blue popup-btn modal__submit-button" type="submit">
                                 <div data-v-0c1d1295="" class="btn-content">
                                   <svg data-v-8c9ccc04="" data-v-0c1d1295="" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" width="25" class=""><path data-v-8c9ccc04="" data-v-0c1d1295="" d="M4 12.5h16M13 5.5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                 </div>
@@ -307,7 +311,11 @@
         </div>
     </div>
     </div>
+
     <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.extensions.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.bindings.min.js"></script>
 </body>
 
 </html>

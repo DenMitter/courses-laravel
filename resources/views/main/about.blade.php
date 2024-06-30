@@ -48,14 +48,15 @@
           </div>
           <div class="way__van d-flex">
             <div class="way__item">
-              <div class="way__num">475 793</div>
+              <div class="way__num">{{ $users->count() }}</div>
               <p>Студента</p>
             </div>
-            <div class="way__item">
+            {{-- <div class="way__item">
               <div class="way__num">9+</div>
               <p>Років у навчанні</p>
-            </div> <a href="library.html" class="way__item">
-              <div class="way__num">11</div>
+            </div> --}}
+            <a href="{{ route('main.index') }}" class="way__item">
+              <div class="way__num">{{ $courses->count() }}</div>
               <p>
                 Курсів
                 <img src="/img/way-arrow.svg" alt="">
@@ -65,7 +66,7 @@
         </div>
       </div>
     </section>
-    <section id="game" class="game" data-v-7d3fa956="">
+    {{-- <section id="game" class="game" data-v-7d3fa956="">
       <div class="container" data-v-7d3fa956="">
         <div class="game__box d-flex" data-v-7d3fa956="">
           <div class="game__boring" data-v-7d3fa956="">
@@ -83,7 +84,7 @@
               style="top: 2px; left: 33px" data-v-7d3fa956=""></div>
         </div>
       </div>
-    </section>
+    </section> --}}
     <section id="we" class="we" data-v-2cdb1890="">
       <link rel="preload" href="/img/about/activity.png" as="image" data-v-2cdb1890="">
       <link rel="preload" href="/img/about/gamification.png" as="image" data-v-2cdb1890="">
@@ -133,14 +134,14 @@
               </div>
             </div>
             <div class="we__block" style="background-color:#eaedfd;" data-v-2cdb1890="">
-              <div class="image-wrapper" data-v-2cdb1890=""><img src="/img/about/activity.png" alt=""
+              <div class="image-wrapper" data-v-2cdb1890=""><img src="{{ asset('img/about/activity.png') }}" alt=""
                   class="image" data-v-2cdb1890="" data-v-2cdb1890=""></div>
             </div>
           </div>
         </div>
       </div>
     </section> <!---->
-    <section id="fest" class="fest" data-v-64c1c316="">
+    {{-- <section id="fest" class="fest" data-v-64c1c316="">
       <div class="container" data-v-64c1c316="">
         <div class="fest__box" data-v-64c1c316="">
           <div class="fest__top d-flex" data-v-64c1c316="">
@@ -192,71 +193,61 @@
           </button>
         </div>
       </div>
-    </section>
+    </section> --}}
     <section id="links" class="links" data-v-4808cc25="">
       <div class="container" data-v-4808cc25="">
         <div class="links__box" data-v-4808cc25="">
           <h2 data-v-4808cc25="">Корисні посилання</h2>
           <ul class="links__list" data-v-4808cc25="">
-            <li data-v-4808cc25=""><a href="library.html" data-v-4808cc25="">Курси</a></li>
-            <li data-v-4808cc25=""><a href="rassrochka.html" data-v-4808cc25="">Розстрочка 0%</a></li>
-            <li data-v-4808cc25=""><a href="https://my.FAVORITE ENGLISH.in/partner" data-v-4808cc25="">Партнерська
-                програма</a></li>
-            <li data-v-4808cc25=""><a href="offerta.html" data-v-4808cc25="">Договір оферти</a></li>
-            <li data-v-4808cc25=""><a href="contacts.html" data-v-4808cc25="">Контакти</a></li>
+            <li data-v-4808cc25=""><a href="{{ route('main.index') }}" data-v-4808cc25="">Курси</a></li>
+            {{-- <li data-v-4808cc25=""><a href="{{ route('main.installment') }}" data-v-4808cc25="">Розстрочка 0%</a></li> --}}
+            {{-- <li data-v-4808cc25=""><a href="{{ route('main.https://my.FAVORITE ENGLISH.in/partner') }}" data-v-4808cc25="">Партнерська програма</a></li> --}}
+            {{-- <li data-v-4808cc25=""><a href="{{ route('main.offerta') }}" data-v-4808cc25="">Договір оферти</a></li> --}}
+            <li data-v-4808cc25=""><a href="{{ route('main.contacts') }}" data-v-4808cc25="">Контакти</a></li>
           </ul>
         </div>
       </div>
     </section>
     <section id="help" class="help" data-v-a40c534a="">
       <div class="container" data-v-a40c534a="">
-        <div class="help__box d-flex" data-v-14f0f9b0="" data-v-a40c534a="">
-          <div class="help__pic" data-v-14f0f9b0=""><img src="/img/help-pic@2x.jpg" alt="" data-v-14f0f9b0="">
+          <div class="help__box d-flex" data-v-14f0f9b0="" data-v-a40c534a="">
+              <div class="help__pic" data-v-14f0f9b0=""><img src="/img/help-pic@2x.jpg" alt="" data-v-14f0f9b0=""></div>
+              <div class="help__content" data-v-14f0f9b0="">
+                  <h2 data-v-14f0f9b0="">Потрібна <img src="/img/emojii-hands.png" alt="" class="emojii" data-v-14f0f9b0=""> допомога у виборі курсу?</h2>
+                  <h4 class="fill-form" data-v-14f0f9b0=""> Заповни форму і ми зв'яжемося з тобою якнайшвидше</h4>
+                  <div class="help__person" data-v-14f0f9b0="">
+                      <h4 data-v-14f0f9b0="">Каріна</h4>
+                      <div class="help__job" data-v-14f0f9b0="">Керівник «Служби турботи»</div>
+                  </div>
+                  <div class="help__text" data-v-14f0f9b0="">
+                      Консультація допоможе виявити твої сильні сторони. Ми
+                      познайомимося та порадимо, як правильно розпочати твою нову кар'єру.
+                  </div>
+              </div>
+              <div class="help__info" data-v-bbb3a68a="" data-v-14f0f9b0="">
+                  <h4 data-v-bbb3a68a="">Ти за один крок від професії:</h4>
+                  <form action="{{ route('main.index.message') }}" class="help__form form" data-v-bbb3a68a="" method="POST">
+                    @method('POST')
+                    @csrf
+                    <div class="form__group" data-v-bbb3a68a="">
+                      <input type="text" name="name" placeholder="Ім'я" autocomplete="off" value="{{ old('name') }}" class="form__field" data-v-bbb3a68a="">
+                    </div>
+                    <div class="form__group" data-v-bbb3a68a="">
+                      <input type="tel" name="phone" maxlength="25" placeholder="Телефон" autocomplete="off" value="{{ old('phone') }}" class="form__field" data-v-bbb3a68a="">
+                    </div>
+                    <button type="submit" class="btn variant-blue help__btn w-100 text-big" data-v-0c1d1295="" data-v-bbb3a68a="">
+                      <div class="btn-content" data-v-0c1d1295="">
+                        <span data-v-0c1d1295="" data-v-bbb3a68a="">Передзвоніть мені</span>
+                      </div>
+                    </button>
+                    <div class="form__policy" data-v-bbb3a68a="">
+                      Натискаючи на цю кнопку, я даю згоду на обробку своїх
+                      <a href="/offerta#personal" target="_blank" data-v-bbb3a68a="">персональних даних</a> 
+                      і погоджуюсь з <a href="/offerta" target="_blank" data-v-bbb3a68a="">договором оферти</a>
+                    </div>
+                  </form>
+              </div>
           </div>
-          <div class="help__content" data-v-14f0f9b0="">
-            <h2 data-v-14f0f9b0="">Потрібна <img src="/img/emojii-hands.png" alt="" class="emojii"
-                data-v-14f0f9b0=""> допомога у виборі курсу?</h2>
-            <h4 class="fill-form" data-v-14f0f9b0=""> Заповни форму і ми зв'яжемося з тобою якнайшвидше</h4>
-            <div class="help__person" data-v-14f0f9b0="">
-              <h4 data-v-14f0f9b0="">Каріна</h4>
-              <div class="help__job" data-v-14f0f9b0="">Керівник «Служби турботи»</div>
-            </div>
-            <div class="help__text" data-v-14f0f9b0="">Консультація допоможе виявити твої сильні сторони. Ми
-              познайомимося та порадимо, як правильно розпочати твою нову кар'єру.</div>
-          </div>
-          <div class="help__info" data-v-bbb3a68a="" data-v-14f0f9b0="">
-            <h4 data-v-bbb3a68a="">Ти за один крок від професії:</h4>
-            <form class="help__form form" data-v-bbb3a68a="">
-              <div class="form__group" data-v-bbb3a68a=""><input type="text" placeholder="Ім'я" autocomplete="off"
-                  value="" class="form__field" data-v-bbb3a68a=""></div>
-              <div class="form__group" data-v-bbb3a68a="">
-                <div class="FAVORITE ENGLISH-phone-input" data-v-16012ebc="" data-v-bbb3a68a="">
-                  <div class="FAVORITE ENGLISH-phone-input__country-button" data-v-16012ebc="">
-                    <div class="FAVORITE ENGLISH-phone-input__country-button_flag-wrapper" data-v-16012ebc=""><svg width="24"
-                        height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="preloader" data-v-14770d5b="" data-v-16012ebc="" data-v-16012ebc="">
-                        <path
-                          d="M21 12.0004C20.9999 13.901 20.3981 15.7528 19.2809 17.2904C18.1637 18.8279 16.5885 19.9723 14.7809 20.5596C12.9733 21.1469 11.0262 21.1468 9.21864 20.5594C7.41109 19.9721 5.83588 18.8276 4.71876 17.29C3.60165 15.7523 2.99999 13.9005 3 11.9999C3.00001 10.0993 3.60171 8.24755 4.71884 6.70994C5.83598 5.17233 7.4112 4.02785 9.21877 3.44052C11.0263 2.85319 12.9734 2.85316 14.781 3.44044"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                          data-v-14770d5b=""></path>
-                      </svg></div><svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewbox="0 0 9 5"
-                      fill="none" data-v-16012ebc="">
-                      <path d="M1 1L4.5 4L8 1" stroke="currentColor"></path>
-                    </svg>
-                  </div><input type="tel" autocomplete="tel" maxlength="25" placeholder="Телефон"
-                    class="FAVORITE ENGLISH-phone-input__input" data-v-16012ebc=""><!---->
-                </div>
-              </div><button type="submit" class="btn variant-blue help__btn w-100 text-big" data-v-0c1d1295=""
-                data-v-bbb3a68a="">
-                <div class="btn-content" data-v-0c1d1295=""><span data-v-0c1d1295=""
-                    data-v-bbb3a68a="">Передзвоніть мені</span></div><!---->
-              </button>
-              <div class="form__policy" data-v-bbb3a68a="">Натискаючи на цю кнопку, я даю згоду на обробку своїх
-                <a href="/offerta#personal" target="_blank" data-v-bbb3a68a="">персональних даних</a> і погоджуюсь
-                з <a href="/offerta" target="_blank" data-v-bbb3a68a="">договором оферти</a></div>
-            </form>
-          </div>
-        </div>
       </div>
     </section>
   </div>

@@ -10125,6 +10125,31 @@ p.error[data-v-bbb3a68a] {
     color: #385bd7
 }
 
+.image-wrapper[data-v-2cdb1890] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    animation: float-data-v-2cdb1890 2s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.image-wrapper .image[data-v-2cdb1890] {
+    transition: opacity .1s ease;
+}
+.image-wrapper img[data-v-2cdb1890] {
+    height: 50%;
+}
+
+@keyframes float-data-v-2cdb1890 {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
 .cookie-enter-active[data-v-a25384fa],
 .cookie-leave-active[data-v-a25384fa] {
     transition: transform .5s ease

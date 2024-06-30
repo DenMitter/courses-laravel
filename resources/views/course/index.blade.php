@@ -56,10 +56,10 @@
                             <p class="text-small" data-v-085dd42a="">Тут навчають</p>
                             <h3 data-v-085dd42a="">З нуля</h3>
                         </div>
-                        <div class="item" data-v-085dd42a="">
+                        {{-- <div class="item" data-v-085dd42a="">
                             <p class="text-small" data-v-085dd42a="">Тривалість</p>
                             <h3 data-v-085dd42a="">{{ $course->during }}</h3>
-                        </div>
+                        </div> --}}
                         <div class="item" data-v-085dd42a="">
                             <p class="text-small" data-v-085dd42a="">На курсі є</p>
                             <h3 data-v-085dd42a="">Наставник</h3>
@@ -76,7 +76,7 @@
                 </section>
             </div>
         </div>
-        <div class="container">
+        {{-- <div class="container">
             <section class="course-page__section-margin" data-v-60666277="">
                 <h2 class="course-page__section-title" data-v-60666277="">Програма навчання</h2>
                 <div data-v-60666277=""></div>
@@ -116,7 +116,7 @@
                     <img src="/img/course/authors/alexey.png" alt="" class="author-portrait" data-v-42dd10d0="">
                 </div>
             </section>
-        </div>
+        </div> --}}
         <section id="how-it-work-section" class="course-page__section-margin" style="--paralax:0px;" data-v-2953b6c4="">
             <div class="container" data-v-2953b6c4=""><img src="/_nuxt/img/check-figure.29cebab.svg" alt=""
                     class="bg-img check" data-v-2953b6c4=""> <img src="/_nuxt/img/cross-figure.bd56b05.svg"
@@ -209,8 +209,7 @@
                         <div class="text" data-v-3dfef6e4="">
                             <p data-v-3dfef6e4="">Люди – ключовий актив {{ config('app.name', 'Laravel') }}. Усі викладачі є нашими друзями. Справжніх
                                 друзів
-                                не буває багато, тому у нас лише 5 авторів та 9 курсів. Наставники на навчанні – це ще одні
-                                викладачі. Вони перевіряють твої роботи та підтримують тебе щодня.</p>
+                                не буває багато, тому у нас лише {{ $teachers }} викладачів та {{ $courses }} курсів.</p>
                             <p data-v-3dfef6e4="">Куратор відповідає за освітній процес на курсі. Він робить навчання
                                 комфортним, допомагаючи з технічними питаннями.</p>
                             <p data-v-3dfef6e4="">Ну а менеджер «Служби турботи» завжди на зв'язку по телефону або в
@@ -222,7 +221,6 @@
                         <p class="list-header text-big" data-v-3dfef6e4="">З тобою працюють:</p>
                         <ul data-v-3dfef6e4="">
                             <li data-v-3dfef6e4="">Викладач</li>
-                            <li data-v-3dfef6e4="">Наставник</li>
                             <li data-v-3dfef6e4="">Куратор</li>
                             <li data-v-3dfef6e4="">«Служба турботи»</li>
                         </ul>
@@ -329,7 +327,7 @@
                             </div>
                             <h4 data-v-78110038="">{{ $course->title }}</h4>
                         </div>
-                        <div class="items" data-v-78110038="">
+                        {{-- <div class="items" data-v-78110038="">
                             <div class="item length" data-v-78110038="">
                                 <p data-v-78110038="">Тривалість</p>
                                 <p class="text-big text-blue" data-v-78110038="">{{ $course->during }}</p>
@@ -338,7 +336,7 @@
                                 <p data-v-78110038="">Старт</p>
                                 <p class="text-big text-blue" data-v-78110038="">{{ $course->starting }}</p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="recent-students" data-v-6ba8f87d="" data-v-78110038="">
                         <div class="d-flex align-center" data-v-6ba8f87d=""><img
@@ -414,7 +412,7 @@
             </section>
             <section class="course-page__section-margin" data-v-724d4e86="">
                 <div class="left-col" data-v-724d4e86="">
-                    <h1 class="large-text" data-v-724d4e86="">WAYUP – це освітня платформа</h1>
+                    <h1 class="large-text" data-v-724d4e86="">{{ config('app.name', 'Laravel') }} – це освітня платформа</h1>
                     <div class="left-col__why" data-v-724d4e86="">
                         <h3 data-v-724d4e86="">Чому обирають нас</h3>
                         <p data-v-724d4e86=""><b data-v-724d4e86="">Бутіковий формат.</b> Ми рідко створюємо нові курси.
@@ -427,12 +425,12 @@
                 </div>
                 <div class="right-col" data-v-724d4e86="">
                     <div class="counters-first" data-v-724d4e86="">
-                        <div data-v-724d4e86="">
+                        {{-- <div data-v-724d4e86="">
                             <h1 class="large-text" data-v-724d4e86="">9</h1>
                             <p class="text-big" data-v-724d4e86="">Років на ринку</p>
-                        </div>
+                        </div> --}}
                         <div data-v-724d4e86="">
-                            <h1 class="large-text" data-v-724d4e86="">475,793</h1>
+                            <h1 class="large-text" data-v-724d4e86="">{{ $users }}</h1>
                             <p class="text-big" data-v-724d4e86="">Проходять курси на сайті</p>
                         </div>
                     </div>

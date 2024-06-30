@@ -15,6 +15,6 @@ class NewsletterSubscribeController extends Controller
         NewsletterUser::firstOrCreate($data);
 
         session()->flash('success', 'Дія успішно виконана!');
-        return redirect()->route('main.index');
+        return back();
     }
 }
