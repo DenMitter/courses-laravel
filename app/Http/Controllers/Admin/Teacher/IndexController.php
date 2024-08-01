@@ -7,7 +7,7 @@ use App\Models\User;
 class IndexController extends Controller
 {
     public function __invoke() {
-        $users = User::all();
-        return view('admin.teacher.index', compact('users'));
+        $teachers = User::where('role', 2)->get();
+        return view('admin.teacher.index', compact('teachers'));
     }
 }

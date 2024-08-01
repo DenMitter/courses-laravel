@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\Teacher;
+namespace App\Http\Requests\Admin\Student;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,8 +24,6 @@ class UpdateRequest extends FormRequest
         return [
             'name' => 'required|string',
             'email' => 'required|string',
-            'student_ids' => 'nullable|array',
-            'student_ids.*' => 'nullable|integer|exists:tags,id',
         ];
     }
 }

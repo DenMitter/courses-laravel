@@ -115,6 +115,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin', 'verified']
 
     Route::group(['prefix' => 'student'], function () {
         Route::get('/', 'App\Http\Controllers\Admin\Student\IndexController')->name('admin.student.index');
+        Route::get('/{student}', 'App\Http\Controllers\Admin\Student\ShowController')->name('admin.student.show');
+        Route::get('/{student}/edit', 'App\Http\Controllers\Admin\Student\EditController')->name('admin.student.edit');
+        Route::patch('/{student}', 'App\Http\Controllers\Admin\Student\UpdateController')->name('admin.student.update');
     });
 
     Route::group(['prefix' => 'teacher'], function () {

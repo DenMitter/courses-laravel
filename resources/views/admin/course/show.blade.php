@@ -59,12 +59,10 @@
                   <tr>
                     <td>Теги</td>
                     <td>
-                      @foreach ($tags as $tag)
-                        @if (is_array($course->tags->pluck('id')->toArray()) && in_array($tag->id, $course->tags->pluck('id')->toArray()))
-                          <span class="show-tags mr-1">
-                            {{ $tag->title }}
-                          </span>
-                        @endif
+                      @foreach ($course->tags as $tag)
+                        <span class="show-tags mr-1">
+                          {{ $tag->title }}
+                        </span>
                       @endforeach
                     </td>
                   </tr>

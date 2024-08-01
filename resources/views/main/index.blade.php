@@ -160,10 +160,11 @@
                                                     @endif
                                                 @endforeach
                                             </div>
-                                            <h4 class="courses__title">{{ $course->title }}</h4>
+                                            <h4 class="courses__title">{{ $course->title }} <span class="courses__duration">( {{ $course->lesson_count }} уроків )</span></h4>
                                             <div class="courses__bottom d-flex">
                                                 {{-- <div class="courses__date">{{ $date->isoFormat('Do MMMM') }}</div> --}}
-                                                <div class="courses__duration">{{ $course->during }}</div>
+                                                {{-- <div class="courses__duration">{{ $course->during }}</div> --}}
+                                                <div class="courses__duration">Безкоштовно</div>
                                             </div>
                                         </div>
                                     </a>

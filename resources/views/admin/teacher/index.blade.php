@@ -26,17 +26,19 @@
                 <tr>
                   <th>ID</th>
                   <th>Ім'я</th>
+                  <th>Пошта</th>
                   <th colspan="3" class="text-center">Дія</th>
                 </tr>
               </thead>
               <tbody>
-                @foreach($users as $user)
-                  @if ($user->role == 2)
+                @foreach($teachers as $teacher)
+                  @if ($teacher->role == 2)
                     <tr>
-                      <td>{{ $user->id }}</td>
-                      <td>{{ $user->name }}</td>
-                      <td><a href="{{ route('admin.teacher.show', $user->id) }}"><i class="far fa-eye"></i></a></td>
-                        <td><a href="{{ route('admin.teacher.edit', $user->id) }}" class="text-success"><i class="fas fa-pencil-alt"></i></a></td>
+                      <td>{{ $teacher->id }}</td>
+                      <td>{{ $teacher->name }}</td>
+                      <td>{{ $teacher->email }}</td>
+                      <td><a href="{{ route('admin.teacher.show', $teacher->id) }}"><i class="far fa-eye"></i></a></td>
+                      <td><a href="{{ route('admin.teacher.edit', $teacher->id) }}" class="text-success"><i class="fas fa-pencil-alt"></i></a></td>
                     </tr>
                   @endif
                 @endforeach

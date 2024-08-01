@@ -36,6 +36,16 @@
                   <td>Пошта</td>
                   <td>{{ $teacher->email }}</td>
                 </tr>
+                <tr>
+                  <td>Студенти</td>
+                  <td>
+                    @foreach ($teacher->students as $student)
+                      <span class="show-tags mr-1">
+                        {{ $student->name }}
+                      </span>
+                    @endforeach
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
