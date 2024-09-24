@@ -29,16 +29,23 @@
           @method('PATCH')
           <div class="card-body">
             <div class="form-group">
-              <label for="exampleInputEmail1">Логін</label>
+              <label>Логін</label>
               <input name="name" type="text" class="form-control" placeholder="Логін" value="{{ $user->name }}">
               @error('name')
                 <p class="text-danger">Це поле має бути заповненим</p>
               @enderror
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Пошта</label>
+              <label>Пошта</label>
               <input name="email" type="email" class="form-control" placeholder="Пошта" value="{{ $user->email }}">
               @error('email')
+                <p class="text-danger">Це поле має бути заповненим</p>
+              @enderror
+            </div>
+            <div class="form-group">
+              <label>Бали</label>
+              <input name="score" type="number" class="form-control" placeholder="Бали" value="{{ $user->score }}" min="0">
+              @error('score')
                 <p class="text-danger">Це поле має бути заповненим</p>
               @enderror
             </div>

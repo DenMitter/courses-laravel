@@ -24,6 +24,7 @@ class UpdateRequest extends FormRequest
         return [
             'name' => 'required|string',
             'email' => 'required|string',
+            'score' => 'required|integer',
             'role' => 'required|integer'
         ];
     }

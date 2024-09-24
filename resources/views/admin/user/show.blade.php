@@ -48,6 +48,10 @@
                   <td>Роль</td>
                   <td>{{ $user->getRole($user->role) }}</td>
                 </tr>
+                <tr>
+                  <td>Бали</td>
+                  <td>{{ $user->score }}</td>
+                </tr>
               </tbody>
             </table>
           </div>

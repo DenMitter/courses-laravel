@@ -56,9 +56,9 @@
                                                 @if($user->courses()->where('course_id', $course->id)->exists())
                                                     <div class="progress progress" data-v-4538add2="" data-v-4c81e784="" style="position: relative; cursor: pointer;">
                                                         <div class="bar" data-v-4538add2="">
-                                                            <div class="fill" style="width:16%;" data-v-4538add2=""></div>
+                                                            <div class="fill" style="width:{{ $course->score }}%;" data-v-4538add2=""></div>
                                                         </div>
-                                                        <span class="counter" style="font-size:12px;" data-v-4538add2="">16%</span>
+                                                        <span class="counter" style="font-size:12px;" data-v-4538add2="">{{ $course->score }}%</span>
                                                     </div>
                                                 @endif
                                             </span>
@@ -124,9 +124,9 @@
                                                 @if($user->courses()->where('course_id', $course->id)->exists())
                                                     <div class="progress progress" data-v-4538add2="" data-v-4c81e784="" style="position: relative; cursor: pointer;">
                                                         <div class="bar" data-v-4538add2="">
-                                                            <div class="fill" style="width:16%;" data-v-4538add2=""></div>
+                                                            <div class="fill" style="width:{{ $course->score }}%;" data-v-4538add2=""></div>
                                                         </div>
-                                                        <span class="counter" style="font-size:12px;" data-v-4538add2="">16%</span>
+                                                        <span class="counter" style="font-size:12px;" data-v-4538add2="">{{ $course->score }}%</span>
                                                     </div>
                                                 @endif
                                             </span>
@@ -148,7 +148,7 @@
                     <div class="profile__level add_c" data-v-20b3bc0f="" style="position: relative; cursor: pointer;">Начинающий</div>
                     <div class="profile__btns df" data-v-20b3bc0f="">
                         <div class="lesson-completed__points" data-v-20b3bc0f="" style="position: relative; cursor: pointer;" data-tooltip="Test">
-                            <span class="lesson-completed__your-number-points" data-v-20b3bc0f="">400 баллов</span>
+                            <span class="lesson-completed__your-number-points" data-v-20b3bc0f="">{{ auth()->user()->score }} баллов</span>
                         </div>
                         <div class="patner-btn-wrapper" data-v-20b3bc0f="" data-tooltip="Партнерська програма" style="position: relative; cursor: pointer;">
                             <a href="/partner" type="button" class="btn variant-light-green partner-btn"
