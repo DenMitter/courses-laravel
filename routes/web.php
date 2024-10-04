@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', 'App\Http\Controllers\Main\IndexController')->name('main.index');
+//Route::get('/', 'App\Http\Controllers\Main\IndexController')->name('main.index');
 Route::post('/message', 'App\Http\Controllers\Main\MessageController')->name('main.index.message');
 Route::post('/subscribe', 'App\Http\Controllers\Main\NewsletterSubscribeController')->name('main.index.subscribe');
 Route::post('/help', 'App\Http\Controllers\Main\HelpController')->name('main.index.help');
@@ -31,7 +31,7 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
         Route::get('/{course}', 'App\Http\Controllers\User\Course\IndexController')->name('user.course.index');
         Route::get('/take/{course}', 'App\Http\Controllers\User\Course\TakeCourseController')->name('user.course.take');
         Route::get('/payment/{course}', 'App\Http\Controllers\User\Course\PaymentController')->name('user.course.payment');
-        
+
         Route::get('/lesson/{lesson}/course/{course}', 'App\Http\Controllers\User\Lesson\IndexController')->name('user.lesson.index');
     });
 });
@@ -72,7 +72,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin', 'verified']
             Route::delete('/{test}', 'App\Http\Controllers\Admin\Course\Test\DeleteController')->name('admin.course.test.delete');
         });
     });
-    
+
     Route::group(['prefix' => 'user'], function () {
         Route::get('/', 'App\Http\Controllers\Admin\User\IndexController')->name('admin.user.index');
         Route::get('/create', 'App\Http\Controllers\Admin\User\CreateController')->name('admin.user.create');

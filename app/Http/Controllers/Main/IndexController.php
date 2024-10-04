@@ -9,11 +9,20 @@ use Carbon\Carbon;
 
 class IndexController extends Controller
 {
-    public function __invoke() {
-        $courses = Course::all()->where('is_published', 1);
-        $tags = Tag::all();
-        $date = new Carbon;
-        $users = User::all();
-        return view('main.index', compact('courses', 'tags', 'date', 'users'));
+    public function index() {
+        $courses = Course::query()
+            ->orderBy('id', 'desc')
+            ->where('is_published', 1)
+            ->paginate(10, ['title', 'preview_image', 'color', 'price', 'lesson_count']);
+
+        $tags = Tag::query()->get(['title', 'color']);
+        $users = User::query()->count(['id']);
+
+        return response()->json([
+            'success' => true,
+            'courses' => $courses,
+            'tags' => $tags,
+            'users' => $users,
+        ]);
     }
 }
